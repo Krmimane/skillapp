@@ -1,0 +1,83 @@
+/* Grid des utilisateurs */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Utilisation de minmax pour des tailles flexibles */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px; /* Ajout de padding pour aérer les éléments */
+}
+
+/* Media Queries pour rendre le design plus adaptatif */
+
+/* Tablettes (1024px ou moins) */
+@media (max-width: 1024px) {
+  .user-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Réduction de la largeur des cartes */
+    gap: 15px; /* Espacement légèrement réduit pour les tablettes */
+  }
+
+  .user-card {
+    max-width: 90%; /* Limiter la largeur des cartes */
+  }
+
+  .category-image {
+    height: 120px; /* Réduction de la hauteur de l'image sur tablette */
+  }
+
+  .user-info h2 {
+    font-size: 1.4rem; /* Réduction de la taille du titre pour les écrans plus petits */
+  }
+}
+
+/* Mobiles (768px ou moins) */
+@media (max-width: 768px) {
+  .user-grid {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    gap: 10px; /* Espacement réduit */
+  }
+
+  .user-card {
+    max-width: 100%; /* Cartes prennent toute la largeur disponible */
+    margin: 0 auto; /* Centrer les cartes */
+    display:flex;
+  }
+
+  .category-image {
+    height: 100px; /* Réduction de la hauteur de l'image pour les petits écrans */
+  }
+
+  .user-info h2 {
+    font-size: 1.2rem; /* Ajustement de la taille du titre */
+  }
+
+  .user-info p {
+    font-size: 0.9rem; /* Ajustement de la taille du texte */
+  }
+
+  .category-section h3 {
+    font-size: 1rem; /* Réduction de la taille des titres des catégories */
+  }
+
+  .category-section li {
+    font-size: 0.9rem; /* Ajustement de la taille des compétences */
+  }
+}
+
+/* Mobiles très petits (480px ou moins) */
+@media (max-width: 480px) {
+  .user-info h2 {
+    font-size: 1.1rem; /* Ajustement de la taille du titre pour petits écrans */
+  }
+
+  .category-section h3 {
+    font-size: 0.9rem; /* Réduction de la taille des titres des catégories */
+  }
+
+  .category-section li {
+    font-size: 0.8rem; /* Ajustement des compétences */
+  }
+
+  .category-image {
+    height: 80px; /* Image plus petite */
+  }
+}

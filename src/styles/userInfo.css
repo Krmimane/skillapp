@@ -1,0 +1,197 @@
+ 
+  /* Profil Header */
+  .profile-h {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .avatar-container {
+    flex-shrink: 0;
+  }
+  
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(150, 53, 53, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.05);
+  }
+  
+  .user-details {
+    color: #000000;
+    font-size: 1rem;
+    flex: 1;
+  }
+  
+  .username {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .ma3 {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    color: #030303;
+    margin: 10px 0;
+  }
+  
+  .ma3 span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .bio1 {
+    
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  .skills-section {
+    margin-top: 15px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skill {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .skill:hover {
+    background-color: #b2bec3;
+    color: #fff;
+  }
+  
+  /* Section Historique */
+  .section-title {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin: 20px 0;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .skill-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skill-header strong {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .skill-header p {
+    color: #666;
+  }
+  
+  .skill-footer {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  @media (max-width: 768px) {
+  /* Réorganiser le profil et les détails utilisateur */
+  .profile-h {
+    flex-direction: column; /* Changer en colonne pour mobile */
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  /* Avatar et détails utilisateur */
+  .avatar-container {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 60px; /* Réduire la taille de l'avatar */
+    height: 60px;
+  }
+
+  .user-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacement entre les détails */
+    font-size: 14px; /* Réduire la taille de la police */
+  }
+
+  .username {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .skills-section {
+    margin-top: 10px;
+  }
+
+  .skills {
+    gap: 8px;
+  }
+
+  /* Formations et compétences sous les détails */
+  .section-title {
+    font-size: 1.2rem; /* Réduire la taille de la police */
+    margin: 15px 0;
+  }
+
+  .history-content {
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Compétences placées sous les détails utilisateur */
+  .skills-section {
+    width: 100%; /* Prendre toute la largeur */
+    margin-top: 15px;
+  }
+  
+  /* Formations affichées sous les compétences */
+  .history-content {
+    width: 100%; /* Prendre toute la largeur */
+    margin-top: 10px;
+  }
+}

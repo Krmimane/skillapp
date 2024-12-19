@@ -1,0 +1,263 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "username": "SkillMaster1",
+        "age": 25,
+        "sexe": "M",
+        "bio": "Passionate about technology and teaching others.",
+        "categories": [
+          {
+            "category": "Technologie et Informatique",
+            "skills": [
+              {"nom": "Programmation Python", "niveau": "Expert"},
+              {"nom": "Développement web", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Langues",
+            "skills": [
+              {"nom": "Anglais", "niveau": "Intermédiaire"},
+              {"nom": "Espagnol", "niveau": "Débutant"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "username": "CookingQueen",
+        "age": 30,
+        "sexe": "F",
+        "bio": "Chef spécialisée en cuisine du monde.",
+        "categories": [
+          {
+            "category": "Cuisine et Gastronomie",
+            "skills": [
+              {"nom": "Pâtisserie", "niveau": "Expert"},
+              {"nom": "Cuisine italienne", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Développement Personnel",
+            "skills": [
+              {"nom": "Gestion du temps", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "username": "LanguageLover",
+        "age": 22,
+        "sexe": "F",
+        "bio": "Polyglotte et passionnée de voyages.",
+        "categories": [
+          {
+            "category": "Langues",
+            "skills": [
+              {"nom": "Mandarin", "niveau": "Avancé"},
+              {"nom": "Français", "niveau": "Expert"}
+            ]
+          },
+          {
+            "category": "Arts et Création",
+            "skills": [
+              {"nom": "Écriture créative", "niveau": "Intermédiaire"} 
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "username": "DIYChampion",
+        "age": 28,
+        "sexe": "M",
+        "bio": "J'adore bricoler et réparer tout type d'objets.",
+        "categories": [
+          {
+            "category": "Bricolage et DIY",
+            "skills": [
+              {"nom": "Réparation d'appareils", "niveau": "Avancé"},
+              {"nom": "Couture", "niveau": "Débutant"}
+            ]
+          },
+          {
+            "category": "Sport et Bien-être",
+            "skills": [
+              {"nom": "Yoga", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "username": "TechGuru",
+        "age": 35,
+        "sexe": "M",
+        "bio": "Expert en technologies et mentor en informatique.",
+        "categories": [
+          {
+            "category": "Technologie et Informatique",
+            "skills": [
+              {"nom": "Cybersécurité", "niveau": "Expert"},
+              {"nom": "Bases de données", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Business et Entrepreneuriat",
+            "skills": [
+              {"nom": "Marketing digital", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "username": "ArtDreamer",
+        "age": 26,
+        "sexe": "F",
+        "bio": "Artiste passionnée par les créations originales.",
+        "categories": [
+          {
+            "category": "Arts et Création",
+            "skills": [
+              {"nom": "Dessin numérique", "niveau": "Avancé"},
+              {"nom": "Photographie", "niveau": "Intermédiaire"}
+            ]
+          },
+          {
+            "category": "Développement Personnel",
+            "skills": [
+              {"nom": "Méditation", "niveau": "Débutant"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "username": "SportFanatic",
+        "age": 29,
+        "sexe": "M",
+        "bio": "Coach sportif dédié à la transformation physique.",
+        "categories": [
+          {
+            "category": "Sport et Bien-être",
+            "skills": [
+              {"nom": "Coaching fitness", "niveau": "Expert"},
+              {"nom": "Nutrition sportive", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Développement Personnel",
+            "skills": [
+              {"nom": "Motivation", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "username": "EcoWarrior",
+        "age": 24,
+        "sexe": "F",
+        "bio": "Passionnée par la durabilité et les projets verts.",
+        "categories": [
+          {
+            "category": "Bricolage et DIY",
+            "skills": [
+              {"nom": "Fabrication d'objets recyclés", "niveau": "Avancé"},
+              {"nom": "Conception écologique", "niveau": "Intermédiaire"}
+            ]
+          },
+          {
+            "category": "Développement Personnel",
+            "skills": [
+              {"nom": "Gestion de projets", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "username": "MusicProd",
+        "age": 32,
+        "sexe": "M",
+        "bio": "Producteur de musique et compositeur passionné.",
+        "categories": [
+          {
+            "category": "Arts et Création",
+            "skills": [
+              {"nom": "Composition musicale", "niveau": "Expert"},
+              {"nom": "Mixage audio", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Technologie et Informatique",
+            "skills": [
+              {"nom": "Logiciels audio", "niveau": "Intermédiaire"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "username": "NatureLover",
+        "age": 27,
+        "sexe": "F",
+        "bio": "Guide touristique spécialisée en randonnées.",
+        "categories": [
+          {
+            "category": "Sport et Bien-être",
+            "skills": [
+              {"nom": "Randonnée", "niveau": "Expert"},
+              {"nom": "Cartographie", "niveau": "Avancé"}
+            ]
+          },
+          {
+            "category": "Langues",
+            "skills": [
+              {"nom": "Italien", "niveau": "Débutant"}
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "username": "TravelerSpirit",
+        "age": 34,
+        "sexe": "M",
+        "bio": "Explorateur de cultures et partageur de compétences.",
+        "categories": [
+          {
+            "category": "Langues",
+            "skills": [
+              {"nom": "Espagnol", "niveau": "Avancé"},
+              {"nom": "Anglais", "niveau": "Intermédiaire"}
+            ]
+          },
+          {
+            "category": "Développement Personnel",
+            "skills": [
+              {"nom": "Gestion du stress", "niveau": "Débutant"} ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "username": "HealthyVibes",
+        "age": 28,
+        "sexe": "F",
+        "bio": "Passionnée par le bien-être et les solutions naturelles.",
+        "categories": [
+          {
+            "category": "Sport et Bien-être",
+            "skills": [
+              {"nom": "Yoga", "niveau": "Expert"},
+              {"nom": "Méditation", "niveau": "Avancé"}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

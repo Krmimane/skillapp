@@ -1,0 +1,22 @@
+.section-title, .section-title1 {
+  font-size: 26px; /* Taille de police plus grande */
+  font-weight: bold; /* Texte en gras */
+  color: #2c3e50; /* Couleur du texte plus sombre */
+  margin-bottom: 20px; /* Espace en dessous du titre */
+  border-bottom: 2px solid #bdc3c7; /* Ligne en dessous du titre */
+  padding-bottom: 10px; /* Espace entre le texte et la ligne */
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+  letter-spacing: 1.5px; /* Espacement entre les lettres */
+  transition: color 0.3s ease; /* Transition douce pour la couleur */
+}
+
+.section-title:hover {
+  color: #602366; /* Changer la couleur au survol */
+}
+
+@media (max-width: 768px) {
+    .section-title1 {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,34 @@
+/* src/styles/LandingPage.css */
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f9; /* Couleur de fond clair */
+}
+
+.landing-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.landing-page p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.landing-page button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Couleur du bouton */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.landing-page button:hover {
+  background-color: #0056b3; /* Teinte plus foncée au survol */
+}

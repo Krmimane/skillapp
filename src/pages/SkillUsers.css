@@ -1,0 +1,9 @@
+.skill-users-container {
+  padding: 20px;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

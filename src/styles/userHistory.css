@@ -1,0 +1,132 @@
+/* userHistory.css */
+
+.history-container {
+ 
+  font-family: 'Arial', sans-serif;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.history-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tab-button {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4f3466;
+  background-color: #f9f7ff;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+  background-color: #e9e1f8;
+  border-color: #947cac;
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background-color: #4f3466;
+  color: #fff;
+  border-color: #4f3466;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-header {
+  flex: 1;
+}
+
+.skill-header strong {
+  display: block;
+  font-size: 1.3rem;
+  color: #4f3466;
+  margin-bottom: 8px;
+}
+
+.skill-header p {
+  font-size: 1rem;
+  color: #7d6597;
+}
+
+.skill-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.95rem;
+  color: #4f3466;
+}
+
+.user-role {
+  font-weight: 600;
+  color: #A580A6;
+}
+
+.skill-date {
+  font-weight: 600;
+  color: #7d6597;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-container {
+    background: none;
+    box-shadow: none;
+    font-family: 'Arial', sans-serif;
+
+  }
+
+  .tab-button {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .skill-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .skill-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

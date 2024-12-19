@@ -1,0 +1,75 @@
+/* Conteneur principal pour la barre de filtres et les boutons de défilement */
+.filter-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Conteneur de la barre de filtres */
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Permet le défilement horizontal */
+  padding: 0 10px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Limiter le nombre de catégories visibles à la fois */
+.filter-bar .category-button {
+  flex-shrink: 0;
+  padding: 8px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  background-color: #d1d0d0;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+  min-width: 120px;
+  scroll-snap-align: start;
+}
+
+/* Style au survol pour chaque catégorie */
+.filter-bar .category-button:hover {
+  background-color: #9cc79d;
+  transform: scale(1.05); /* Animation légère au survol */
+}
+
+/* Style de la catégorie active */
+.filter-bar .category-button.active {
+  background-color: #9cc79d; /* Couleur active */
+  color: rgba(122, 110, 110, 0.568);
+}
+
+/* Flèches de défilement sans cadre et avec effet au survol */
+.filter-bar .scroll-button {
+  background-color: transparent;
+  color: #83bb85;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+/* Changer la couleur des flèches au survol */
+.filter-bar .scroll-button:hover {
+  color: #45a049; /* Une teinte plus foncée de vert */
+}
+
+/* Positionnement des flèches */
+.filter-bar .scroll-button.left {
+  margin-left: 10px;
+}
+
+.filter-bar .scroll-button.right {
+  margin-right: 10px;
+}
+
+/* Cacher les barres de défilement */
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}

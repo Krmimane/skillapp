@@ -1,0 +1,245 @@
+/* Styles de la barre latérale (Slider) */
+.sidebar {
+  position: fixed; /* Fixe la barre latérale */
+  top: 0; /* Aligne en haut de la fenêtre */
+  left: 0;
+  width: 5.5rem;
+  height: 100vh;
+  background-color: #c3a0e9; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 0;
+  box-shadow: 3px 0 1px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  transition: width 0.3s ease;
+  border-radius: 10px 0 0 10px; /* Coins arrondis */
+}
+  
+.sidebar:hover {
+    width: 15rem; /* Expansion sur survol */
+}
+
+
+.menu {
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+a {
+  text-decoration: none; /* Supprime la ligne soulignée */
+}
+
+.menu-item {
+  width: 90%;
+  padding: 1rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  color: #333;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  position: relative;
+  opacity: 0.9;
+}
+
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+  color: #000;
+  transform: scale(1.05);
+}
+
+.menu-item.active {
+  background-color: #F8BBD0 ;
+  color: #000;
+  font-weight: bold;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-icon {
+  font-size: 1.75rem;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  margin-left: 0.5rem;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .label {
+  opacity: 1;
+}
+
+.sidebar .menu-item:hover .sidebar-icon {
+  transform: translateY(-5px);
+}
+
+.sidebar .menu-item.active .sidebar-icon {
+  transform: translateY(-5px);
+}
+
+/* Log out */
+.logout {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: #ff4e50;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.logout:hover {
+  background-color: #ffcccc;
+  color: #ff4e50;
+}
+
+.logout-icon {
+  margin-right: 0.5rem;
+}
+
+.logout-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar:hover .logout-label {
+  opacity: 1;
+}
+
+/* Section utilisateur */
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.user-icon img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+
+.user-name {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.sidebar:hover .user-name {
+  color: #000;
+}
+.mobile-message-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:#7e26bc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9000;
+}
+
+.mobile-message-btn:hover {
+  background-color: #9b65c2;
+  cursor: pointer;
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .label {
+    opacity: 1;
+    font-size: 0.8rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .icon {
+    font-size: 1.5rem; /* Réduire la taille de l'icône */
+  }
+  .menu-item {
+    padding: 0.5rem; /* Réduire le padding pour les éléments de menu */
+    flex-direction: row; /* Aligner l'icône et le texte sur une seule ligne */
+    justify-content: flex-start; /* Alignement à gauche */
+  }
+  .sidebar:hover .label {
+    opacity: 1;
+  }
+
+  .sidebar:hover {
+    width: 40%;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000; /* Ensure it is above other elements */
+    background-color: #FAF9F6;
+    border: none;
+  }
+  .logout-label {
+    opacity: 1; /* Toujours visible sur mobile */
+}
+
+  .logout{
+      background-color: transparent;
+      font-size: 0.8rem; /* Supprimer l'effet de survol */
+  }
+  .logout-icon {
+    font-size: 1.5rem;
+  }
+
+
+  
+}
