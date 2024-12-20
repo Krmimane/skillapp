@@ -5,50 +5,94 @@ const UserHistory = () => {
   const [activeTab, setActiveTab] = useState('learned');
 
   const learnedSkills = [
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
+    {
+      name: 'JavaScript Basics',
+      info: 'Introduction aux concepts de base comme les variables, les boucles, et les fonctions.',
+      role: 'Tuteur',
+      date: '15 Décembre 2024',
+      image: 'assets/avatar3.png',
+    },
+    {
+      name: 'React Fundamentals',
+      info: 'Apprentissage des composants, des hooks, et du state management.',
+      role: 'Tuteur',
+      date: '10 Décembre 2024',
+      image: 'assets/avatar3.png',
+    },
+    {
+      name: 'CSS Responsive Design',
+      info: 'Création de sites web adaptatifs avec Flexbox et Grid.',
+      role: 'Tuteur',
+      date: '5 Décembre 2024',
+      image: 'assets/avatar3.png',
+    },
   ];
-
+  
   const taughtSkills = [
-    { name: 'info', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
+    {
+      name: 'Node.js Basics',
+      info: 'Concepts essentiels pour démarrer avec Node.js et construire des serveurs backend.',
+      role: 'Tuteur',
+      date: '20 Novembre 2024',
+      image: 'assets/avatar6.png',
+    },
+    {
+      name: 'Python Data Analysis',
+      info: 'Utilisation de Python pour manipuler et analyser des ensembles de données.',
+      role: 'Tuteur',
+      date: '15 Novembre 2024',
+      image: 'assets/avatar6.png',
+    },
   ];
+  
 
-  const renderSkills = (skills) => (
-    skills.map((skill, index) => (
-      <div key={index} className="skill-card">
-        <div className="skill-header">
-          <strong>{skill.name}</strong>
-          <p>{skill.info}</p>
+  const SkillCard = ({ name, info, role, date, image }) => (
+    <div className="skillCard21">
+      <img src={image} alt="Avatar" className="skillImage21" />
+      <div className="skillContent21">
+        <div className="skillHeader21">
+          <h3 className="skillName21">{name}</h3>
         </div>
-        <div className="skill-footer">
-          <span className="user-role">{skill.role}</span>
-          <span className="skill-date">{skill.date}</span>
+        <p className="skillInfo21">{info}</p>
+        <div className="skillFooter21">
+          <span className="userRole21">{role}</span>
+          <span className="skillDate21">{date}</span>
         </div>
       </div>
-    ))
+    </div>
   );
 
+  const renderSkills = (skills) =>
+    skills.map((skill, index) => (
+      <SkillCard
+        key={index}
+        name={skill.name}
+        info={skill.info}
+        role={skill.role}
+        date={skill.date}
+        image={skill.image}
+      />
+    ));
+
   return (
-    <div className="history-container">
-      <div className="history-header">
-        <div className="history-tabs">
-          <button 
-            className={`tab-button ${activeTab === 'learned' ? 'active' : ''}`}
+    <div className="historyContainer21">
+      <div className="historyHeader21">
+        <div className="historyTabs21">
+          <button
+            className={`tabButton21 ${activeTab === 'learned' ? 'active21' : ''}`}
             onClick={() => setActiveTab('learned')}
           >
             Learned
           </button>
-          <button 
-            className={`tab-button ${activeTab === 'taught' ? 'active' : ''}`}
+          <button
+            className={`tabButton21 ${activeTab === 'taught' ? 'active21' : ''}`}
             onClick={() => setActiveTab('taught')}
           >
             Taught
           </button>
         </div>
       </div>
-      <div className="history-content">
+      <div className="historyContent21">
         {activeTab === 'learned' && renderSkills(learnedSkills)}
         {activeTab === 'taught' && renderSkills(taughtSkills)}
       </div>

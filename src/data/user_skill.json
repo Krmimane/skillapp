@@ -21,7 +21,8 @@
               {"nom": "Espagnol", "niveau": "Débutant"}
             ]
           }
-        ]
+        ],
+        "avatar":"../assets/avatar1.jpg"
       },
       {
         "id": 2,
@@ -43,7 +44,9 @@
               {"nom": "Gestion du temps", "niveau": "Intermédiaire"}
             ]
           }
-        ]
+        ],
+
+        "avatar":"../src/assets/avatar2.png"
       },
       {
         "id": 3,
@@ -66,6 +69,8 @@
             ]
           }
         ]
+        ,
+        "avatar":"../src/assets/avatar3.png"
       },
       {
         "id": 4,
@@ -88,6 +93,8 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatar4.png"
       },
       {
         "id": 5,
@@ -110,6 +117,8 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatar5.png"
       },
       {
         "id": 6,
@@ -132,6 +141,8 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatar6.png"
       },
       {
         "id": 7,
@@ -154,6 +165,8 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatar7.png"
       },
       {
         "id": 8,
@@ -176,6 +189,8 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatar8jpg.jpg"
       },
       {
         "id": 9,
@@ -198,6 +213,8 @@
             ]
           }
         ]
+        ,
+        "avatar":"../src/assets/avatar9.png"
       },
       {
         "id": 10,
@@ -220,6 +237,8 @@
             ]
           }
         ]
+        ,
+        "avatar":"../src/assets/avatar10.png"
       },
       {
         "id": 11,
@@ -241,6 +260,8 @@
               {"nom": "Gestion du stress", "niveau": "Débutant"} ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatarr.png"
       },
       {
         "id": 12,
@@ -257,7 +278,9 @@
             ]
           }
         ]
+         ,
+        "avatar":"../src/assets/avatarheakth.png"
+       
       }
     ]
   }
-  

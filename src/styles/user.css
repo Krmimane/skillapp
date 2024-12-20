@@ -148,12 +148,8 @@
   .profile-header {
     display: flex;
     align-items: center;
-    border: 1px solid #e0e0e0;
     padding: 25px;
     gap: 30px;
-    border-radius: 12px;
-    background-color: #fafafa;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
   
   .avatar {
@@ -237,23 +233,25 @@
   }
   
   .skill.expert {
-    background-color: #a5ceaf;
-    color: #0b3e17;
+    background-color: #e6e0f8; /* Mauve pastel */
+    color: #5a189a; /* Mauve intense */
   }
+  
   .skill.avancé {
-    background-color: #d4edda;
-    color: #155724;
+    background-color: #dceaf5; /* Bleu pastel */
+    color: #1e3a8a; /* Bleu intense */
   }
   
   .skill.intermédiaire {
-    background-color: #fff3cd;
-    color: #856404;
+    background-color: #f8f0e3; /* Beige doux */
+    color: #8c5319; /* Marron/beige intense */
   }
   
   .skill.débutant {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #fce4ec; /* Rose pastel */
+    color: #ad1457; /* Rose foncé */
   }
+  
   
   .competence-header {
     display: flex;

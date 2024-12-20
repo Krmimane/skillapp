@@ -56,8 +56,8 @@ const Statecourbe = ({ isPopup = false }) => {
       {
         label: "Heures Apprises",
         data: heuresAppris,
-        borderColor: "#8ED17A", // Vert
-        backgroundColor: "rgba(142, 209, 122, 0.4)", // Vert clair
+        borderColor: "#F5C8AA", // Vert
+        backgroundColor: "rgba(245, 200, 170, 0.4)", // Vert clair
         fill: true,
         tension: 0.4, // Lissage
       },
@@ -79,12 +79,11 @@ const Statecourbe = ({ isPopup = false }) => {
       border: "1px solid #ddd",
       borderRadius: "12px",
       padding: "10px",
-      width: "90%", // Utilise 90% de l'espace en popup pour mobile
+      width: "97%", // Utilise 90% de l'espace en popup pour mobile
       maxWidth: "100%",
       boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
       backgroundColor: "#fff",
-      margin: "10px auto",
-      height: "240px", // Hauteur réduite pour mobile
+      height: "320px", // Hauteur réduite pour mobile
     },
     title: {
       fontSize: "18px", // Taille de titre réduite
@@ -95,7 +94,7 @@ const Statecourbe = ({ isPopup = false }) => {
     },
     chartWrapper: {
       width: "100%",
-      height: "180px", // Hauteur adaptée pour mobile
+      height: "270px", // Hauteur adaptée pour mobile
     },
   };
   
@@ -131,6 +130,7 @@ const Statecourbe = ({ isPopup = false }) => {
 
   return (
     <div style={styles.container}>
+      
       <h3 style={styles.title}>
         <em>Graphique des Heures Apprises et Enseignées</em>
       </h3>

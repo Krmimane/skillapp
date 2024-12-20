@@ -1,132 +1,99 @@
-/* userHistory.css */
-
-.history-container {
- 
-  font-family: 'Arial', sans-serif;
+.historyHeader21 {
+  margin-bottom: 20px;
 }
 
-.history-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-
-.history-tabs {
+.historyTabs21 {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.tab-button {
-  padding: 12px 25px;
-  font-size: 1.1rem;
+
+.tabButton21 {
+  padding: 10px 20px;
+  font-size: 1rem;
   font-weight: 600;
   color: #4f3466;
-  background-color: #f9f7ff;
-  border: 2px solid transparent;
   border-radius: 25px;
+  border: 2px solid transparent;
+  background-color: #f9f7ff;
   cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.tab-button:hover {
-  background-color: #e9e1f8;
-  border-color: #947cac;
-  transform: translateY(-2px);
-}
-
-.tab-button.active {
+.tabButton21.active21 {
   background-color: #4f3466;
   color: #fff;
-  border-color: #4f3466;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
 }
-
-.history-content {
+.historyContent21 {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: column; /* Stack the cards vertically */
+  align-items: center; /* Center the cards horizontally */
+  gap: 20px; /* Optional: Add spacing between cards */
 }
 
-.skill-card {
+.skillCard21 {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  margin-bottom: 20px;
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 50%;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.skillCard21:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.skill-header {
+.skillImage21 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.skillContent21 {
   flex: 1;
 }
 
-.skill-header strong {
-  display: block;
-  font-size: 1.3rem;
-  color: #4f3466;
-  margin-bottom: 8px;
+.skillHeader21 {
+  margin-bottom: 10px;
 }
 
-.skill-header p {
-  font-size: 1rem;
-  color: #7d6597;
+.skillName21 {
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.skill-footer {
+.skillInfo21 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.skillFooter21 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  font-size: 0.95rem;
+  font-size: 12px;
+  color: #888;
+}
+
+.userRole21 {
+  font-weight: bold;
   color: #4f3466;
 }
 
-.user-role {
-  font-weight: 600;
-  color: #A580A6;
-}
-
-.skill-date {
-  font-weight: 600;
-  color: #7d6597;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  .history-container {
-    background: none;
-    box-shadow: none;
-    font-family: 'Arial', sans-serif;
 
+  
+
+  .skillCard21 {
+    width: 95%;
   }
 
-  .tab-button {
-    font-size: 1rem;
-    padding: 8px 15px;
-  }
-
-  .skill-card {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .skill-footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }

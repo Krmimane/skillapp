@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import "./App.css";
 import SlideBar from "./components/SliderComponent";
 import Home from "./pages/home";
@@ -8,6 +8,7 @@ import Messages from "./pages/chat";
 import LandingPage from "./pages/landingpage";
 import SkillUsers from "./pages/SkillUsers";
 import Discover from "./pages/Discover";
+import UserInfo from "./components/userInfo";
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -21,6 +22,17 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const MainContentWrapper = ({ children }) => {
+    const location = useLocation();
+    const isHome = location.pathname === "/home";
+
+    return (
+      <div className={`main-content ${isHome ? "home-page" : ""}`}>
+        {children}
+      </div>
+    );
+  };
 
   return (
     <Router>
@@ -38,10 +50,11 @@ function App() {
             element={
               <>
                 <SlideBar isMobile={isMobile} />
-                <div className="main-content">
+                <MainContentWrapper>
                   <Routes>
                     <Route path="home" element={<Home />} />
                     <Route path="profile" element={<Profile />} />
+                    <Route path="userprofile" element={<UserInfo />} />
                     <Route
                       path="messages"
                       element={isMobile ? null : <Messages currentUsername={currentUsername} />}
@@ -51,7 +64,7 @@ function App() {
                     {/* Redirect to Home for unknown routes */}
                     <Route path="*" element={<Navigate to="/home" />} />
                   </Routes>
-                </div>
+                </MainContentWrapper>
               </>
             }
           />
