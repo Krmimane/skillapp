@@ -232,17 +232,7 @@
   position: relative;
 }
 
-/* Trait vertical entre les colonnes */
-.skillsContainer::before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background-color: #693d6e;
-  transform: translateX(-50%);
-}
+
 
 /* Styles pour les colonnes */
 .skillColumn {
@@ -265,6 +255,7 @@
 
 /* Mise à jour pour garder le positionnement desktop sur mobile */
 @media (max-width: 768px) {
+   
   .skillsContainer {
     flex-direction: column; /* Organisation en colonne pour les colonnes */
     gap: 1px; /* Espace entre les sections */

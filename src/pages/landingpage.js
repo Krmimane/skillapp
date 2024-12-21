@@ -14,7 +14,6 @@ import skill3 from "../assets/photo.png";
 import skill4 from "../assets/painterft.png";
 import { useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-
 Modal.setAppElement("#root");
 
 const LandingPage = ({ setCurrentUsername }) => {
@@ -137,7 +136,7 @@ const LandingPage = ({ setCurrentUsername }) => {
               <img
                 src={logo}
                 alt="Logo"
-                className="skill-image"
+                className="logo"
                 style={{ height: "3.5rem", width: "3.5rem" }}
               />
               <h1 style={{ fontSize: "1.3rem" }}>SkillSphere</h1>
@@ -152,7 +151,7 @@ const LandingPage = ({ setCurrentUsername }) => {
             </div>
           </header>
           <section className="hero">
-            <h2 style={{ marginTop: 0 }}>Share and Learn New Skills</h2>
+            <h2 >Share and Learn New Skills</h2>
             <p>
               Connect with others to exchange valuable knowledge and expertise!
             </p>
@@ -191,7 +190,7 @@ const LandingPage = ({ setCurrentUsername }) => {
       <Modal
         isOpen={isSignUpOpen}
         onRequestClose={closeSignUp}
-        className="modal modal-signup"
+        className="modallp modal-signup"
         overlayClassName="overlay"
       >
         <div className="headermodal">
@@ -225,7 +224,7 @@ const LandingPage = ({ setCurrentUsername }) => {
       <Modal
         isOpen={isSignInOpen}
         onRequestClose={closeSignIn}
-        className="modal"
+        className="modallp"
         overlayClassName="overlay"
       >
         <div className="headermodal">

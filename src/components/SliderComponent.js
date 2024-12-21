@@ -1,12 +1,13 @@
 
 import React, { useState } from "react";
-import { NavLink,useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "../styles/SliderComponent.css";
 import { FaHome, FaSearch, FaEnvelope, FaUser, FaSignOutAlt, FaBars } from "react-icons/fa";
 import { AiOutlineMessage } from "react-icons/ai";
 const SlideBar = ({ isMobile }) => {
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
     { name: "Home", path: "/home", icon: <FaHome />, mobileVisible: true },
@@ -21,7 +22,7 @@ const SlideBar = ({ isMobile }) => {
 
   return (
     <div>
-      {isMobile && (
+      {isMobile && location.pathname !== "/messages" && (
         <button className="hamburger" onClick={toggleSidebar}>
           <FaBars />
         </button>
@@ -58,17 +59,17 @@ const SlideBar = ({ isMobile }) => {
 
       </div>
       {/* Bouton mobile pour "Messages" */}
-      {isMobile && (
-       <button
-         className="mobile-message-btn"
-         onClick={() => {
-           setIsActive(false); // Ferme la barre latérale
-           navigate("/messages"); // Navigue vers la page des messages
-         }}
-       >
-         <AiOutlineMessage size={25} />
-       </button>
-     )}
+      {isMobile && location.pathname !== "/messages" && (
+        <button
+          className="mobile-message-btn"
+          onClick={() => {
+            setIsActive(false); // Ferme la barre latérale
+            navigate("/messages"); // Navigue vers la page des messages
+          }}
+        >
+          <AiOutlineMessage size={25} />
+        </button>
+      )}
       
     </div>
   );

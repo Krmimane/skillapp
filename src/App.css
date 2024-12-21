@@ -30,6 +30,7 @@
 
 
 
+
 .main-content::-webkit-scrollbar {
   display: none; /* Cacher la barre de défilement */
 }
@@ -55,5 +56,10 @@
   }
   .mobile-view {
     display: block; /* Afficher la version mobile */
+  }
+  .main-content.message-page {
+    all:initial;
+    width: 100%;
+  
   }
 }

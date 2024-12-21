@@ -1,0 +1,351 @@
+/* Conteneur de la carte utilisateur */
+.skill-user-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.skill-user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* En-tête du profil */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; /* Ajouté pour positionner le bouton de manière absolue */
+}
+
+.chat-button {
+  position: absolute;
+  top: 30px; /* Ajustez cette valeur pour le placer plus haut */
+  right: 10px; /* Ajustez cette valeur pour aligner à droite */
+  background-color: transparent;
+  border: none;
+  font-size: 22px; /* Taille par défaut */
+  cursor: pointer;
+}
+
+.chat-button:hover {
+  color: #0056b3;
+  transform: scale(1.2); /* Effet au survol */
+}
+
+/* Media queries pour ajustement sur mobile */
+@media screen and (max-width: 768px) {
+  .chat-button {
+    font-size: 18px; /* Réduit la taille sur mobile */
+    top: 8px; /* Ajustez la hauteur pour conserver une bonne position */
+    right: 5px; /* Ajustez selon les besoins */
+  }
+}
+
+
+/* Conteneur de l'image du profil */
+.profile-image-container {
+  display: flex;
+  margin-right: 10px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+/* Conteneur du nom d'utilisateur */
+.username-container {
+  flex-grow: 1;
+}
+
+.username-container h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin: 0;
+  cursor: pointer;
+  margin-left: 0; /* Correction de la syntaxe */
+  text-align: left; /* Aligner le texte à gauche */
+  transition: color 0.3s ease;
+}
+
+.username-container h3:hover {
+  color: #007bff;
+}
+
+
+
+/* Informations personnelles */
+.user-info {
+  margin-top: 10px;
+}
+
+.user-info h4 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.user-info .info-row {
+  display: flex;
+  gap: 15px;
+}
+
+.user-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Bio */
+.bio-section {
+  margin-top: 10px;
+}
+
+.bio-section h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.bio-section p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Skills */
+.skills-section {
+  margin-top: 10px;
+}
+
+.skills-section h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skills-title {
+  font-size: 1.5rem; /* Taille de la police */
+  color: #333; /* Couleur du texte */
+  margin: 0; /* Enlève les marges par défaut */
+  padding: 0; /* Enlève les espacements internes */
+  text-align: left; /* Aligner le texte à gauche */
+ 
+}
+
+
+
+.skills-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.skill-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Modal background */
+/* Styles généraux de la modal */
+/* Styles généraux de la modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Assombrit l'arrière-plan */
+  z-index: 1000;
+  overflow: auto;
+  transition: background 0.3s ease;
+}
+
+/* Contenu de la modal */
+.modal-content {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 450px;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Bouton de fermeture */
+.close {
+  font-size: 30px;
+  color: #aaa;
+  cursor: pointer;
+  justify-content: right;
+  top: 5px;
+  right: 300px;
+}
+
+.close:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* Profil utilisateur dans la modal */
+.user-profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-image-container {
+  margin-right: 15px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ddd;
+}
+
+/* Titre de la modal */
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Liste des points clés dans la modal */
+.modal-body ul {
+  list-style-type: disc;
+  margin: 0 auto;
+  padding-left: 20px;
+  text-align: left;
+  max-width: 500px;
+}
+
+.modal-body ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal-body p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Button to action or close in the modal */
+.modal-action-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.modal-action-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .modal-body ul {
+    padding-left: 15px;
+  }
+
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* For the skill-specific modal */
+.modal-body h5 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.skill-detail {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.skill-detail h5 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.skill-detail ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.skill-detail ul li {
+  color: #666;
+  font-size: 1rem;
+}
+

@@ -1,41 +1,4 @@
 
-
-/* 
-.landing-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f4f4f9; 
-  }
-  
-  .landing-page h1 {
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .landing-page p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .landing-page button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: #007bff; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .landing-page button:hover {
-    background-color: #0056b3; 
-  }
-*/
-/* Global Styles */
   
   .landing-page {
     height: 100vh;
@@ -137,12 +100,16 @@
   .hero {
     text-align: center;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     position: relative;
     overflow: hidden;
   }
   
   .hero h2 {
     font-size: 2rem;
+    margin-top:2rem;
     margin-bottom: 1rem;
   }
   
@@ -300,7 +267,7 @@
   }
 
 /* Modal styles */
-.modal {
+.modallp {
   font-family: "Sunflower",arial;
   background-color: #fff;
   border-radius: 12px;
@@ -310,7 +277,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.modal h2 {
+.modallp h2 {
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
@@ -318,29 +285,30 @@
   color:black;
 }
 
-.modal form {
+.modallp form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.modal form label {
+.modallp form label {
   font-size: 1rem;
   font-weight: 700;
   color: #555;
 }
 
-.modal form input,
-.modal form select {
+.modallp form input,
+.modallp form select {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s;
+  width: initial;
 }
 
-.modal form input:focus,
-.modal form select:focus {
+.modallp form input:focus,
+.modallp form select:focus {
   border-color: #5e17eb;
   outline: none;
 }
@@ -353,7 +321,7 @@
   margin-top: 1rem;
   height:2rem;
 }
-.modal .button {
+.modallp .button {
   padding: 0.8rem 1.2rem;
   border: none;
   width:15rem;
@@ -363,16 +331,16 @@
   transition: background-color 0.3s;
 }
 
-.modal .button.primary {
+.modallp .button.primary {
   background-color: #5e17eb;
   color: #fff;
 }
 
-.modal .button.primary:hover {
+.modallp .button.primary:hover {
   background-color: #4b13c8;
 }
 
-.modal .close {
+.modallp .close {
 
   margin-top:1rem;
   background: transparent;
@@ -382,11 +350,11 @@
   transition: color 0.3s;
 }
 
-.modal .close:hover {
+.modallp .close:hover {
   color: #5e17eb;
 }
 /* Style spécifique au modal d'inscription */
-.modal.modal-signup {
+.modallp.modal-signup {
   min-width: 400px; /* Assurez-vous que cette valeur a priorité */
 }
 .headermodal
@@ -416,7 +384,7 @@
     gap: 1rem;
   }
   
-  .skill-image {
+  .logo {
     display: block;
   }
 /* Taille et structure du slider */
@@ -531,13 +499,13 @@
   .swiper-button-next::after {
     font-size: 14px; /* Taille des flèches réduite */
   }
-  .modal {
+  .modallp {
     width: 90%; /* Adjust to fit smaller screens */
     min-width: auto; /* Remove minimum width */
     margin: 1rem;
   }
 
-  .modal h2 {
+  .modallp h2 {
     font-size: 1rem;
     font-weight: 800;
     width:95%;
@@ -545,11 +513,11 @@
     color:black;
   }
 
-  .modal form {
+  .modallp form {
     gap: 0.8rem; /* Reduce spacing between form elements */
   }
 
-  .modal.modal-signup {
+  .modallp.modal-signup {
     width: 100%; /* Make modal take the full width of the container */
     min-width: auto; /* Reset min-width */
   }
@@ -561,11 +529,11 @@
 
   }
 
-  .modal .button {
+  .modallp .button {
     width: 8rem; /* Buttons take the full width in small screens */
     font-size: 0.9rem; /* Slightly smaller font */
   }
-  .modal .close {
+  .modallp .close {
 
     margin-top:0.5rem;
     background: transparent;
@@ -575,7 +543,7 @@
     transition: color 0.3s;
   }
   
-  .modal .close:hover {
+  .modallp .close:hover {
     color: #5e17eb;
   }
 
@@ -592,192 +560,3 @@
   justify-content: center;
   
 }
-
-
-/* 
-@media (max-width: 1024px) {
-  .landing-page {
-    font-size: 10rem;
-  }
-
-  .headerlp h1 {
-    font-size: 1.5rem;
-  }
-
-  .headerlp .button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
-    
-  }
-
-  .hero h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 0.8rem;
-  }
-
-  .images-container .image-wrapper {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  .images-container .image {
-    width: 12rem;
-    height: 12rem;
-  }
-
-  .shape {
-    transform: scale(0.8); 
-  }
-
-  .modal {
-    padding: 1.5rem;
-  }
-
-  .modal h2 {
-    font-size: 1.5rem;
-  }
-
-  .modal form input,
-  .modal form select {
-    padding: 0.6rem;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .landing-page {
-    font-size: 8rem;
-  }
-
-  .headerlp h1 {
-    font-size: 1.2rem;
-  }
-
-  .headerlp .button {
-    padding: 0.5rem 1rem;
-    font-size: 0.7rem;
-  }
-
-  .hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .images-container .image-wrapper {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .images-container .image {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .shape {
-    transform: scale(0.6); 
-  }
-
-  .modal {
-    padding: 1rem;
-  }
-
-  .modal h2 {
-    font-size: 1.2rem;
-  }
-
-  .modal form input,
-  .modal form select {
-    padding: 0.5rem;
-  }
-}
-
-
-@media (max-width: 480px) {
-  .landing-page {
-    font-size: 6rem;
-  }
-
-  .headerlp h1 {
-    font-size: 1rem;
-  }
-
-  .headerlp .button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.6rem;
-  }
-
-  .hero h2 {
-    font-size: 1.2rem;
-  }
-
-  .hero p {
-    font-size: 0.8rem;
-  }
-
-  .images-container .image-wrapper {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .images-container .image {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .shape {
-    transform: scale(0.4);
-  }
-
-  .modal {
-    padding: 0.8rem;
-  }
-
-  .modal h2 {
-    font-size: 1rem;
-  }
-
-  .modal form input,
-  .modal form select {
-    padding: 0.4rem;
-  }
-}
-
-*/
-
-  /* Hero Section */
- /* .hero {
-
-    padding: 1rem;
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-   
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  .hero-buttons {
-    margin: 1rem 0;
-  }
-  
-  .hero .button.primary {
-    background-color: #6c63ff;
-    color: white;
-  }
-  
-  .hero .button.secondary {
-    background-color: #ff6584;
-    color: white;
-  }*/
-  

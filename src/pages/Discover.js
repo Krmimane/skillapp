@@ -1,49 +1,100 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import FilterBar from "../components/FilterBar";
-import SkillGrid from "../components/SkillGrid";
-import "./Discover.css";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import CategorySelector from "../components/CategorySelector";
+import "../styles/Discover.css";
+import SkillCard from "../components/SkillCard";
+import userSkills from "../data/user_skill.json"; // Données JSON utilisateur
 
+const Discover = () => {
+  const [categories, setCategories] = useState([]); // Liste des catégories (inclut "All")
+  const [skillsData, setSkillsData] = useState({}); // Compétences regroupées par catégorie
+  const [selectedCategory, setSelectedCategory] = useState("All"); // Catégorie sélectionnée par défaut
 
-function Discover() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const navigate = useNavigate();
+  useEffect(() => {
+    const extractedCategories = ["All"]; // Ajouter "All" au début
+    const extractedSkills = {};
 
-  const skills = [
-    { title: "Home Design", image: "https://i.pinimg.com/736x/c9/b8/60/c9b860715b135523da605aab5930545f.jpg", category: "Design", path: "home-design" },
-    { title: "React Development", image: "https://i.pinimg.com/736x/60/23/96/6023967d6cdcb41271b6be831ef7544b.jpg", category: "IT", path: "react-development" },
-    { title: "Creative Poetry", image: "https://i.pinimg.com/736x/ae/79/15/ae7915335576a07b29c0a63e45772e18.jpg", category: "Poetry", path: "creative-poetry" },
-    { title: "Guitar Techniques", image: "https://i.pinimg.com/736x/06/20/9c/06209c9d74f59f92ad91b2d30435add2.jpg", category: "Music", path: "guitar-techniques" },
-    { title: "Photo Editing", image: "https://i.pinimg.com/736x/4c/db/c2/4cdbc21db42d576599e469b9aa8dfc37.jpg", category: "Photography", path: "photo-editing" },
-  ];
+    // Parcourir les utilisateurs et leurs compétences
+    userSkills.users.forEach((user) => {
+      user.categories.forEach((category) => {
+        const categoryName = category.category;
 
-  const categories = ["All", "Design", "IT", "Poetry", "Music", "Photography"];
+        // Ajouter la catégorie si elle n'existe pas déjà
+        if (!extractedCategories.includes(categoryName)) {
+          extractedCategories.push(categoryName);
+          extractedSkills[categoryName] = [];
+        }
 
-  const filteredSkills =
-    selectedCategory === "All"
-      ? skills
-      : skills.filter((skill) => skill.category === selectedCategory);
+        // Ajouter les compétences sous chaque catégorie
+        category.skills.forEach((skill) => {
+          if (!extractedSkills[categoryName]?.some((s) => s.nom === skill.nom)) {
+            extractedSkills[categoryName] = [
+              ...(extractedSkills[categoryName] || []),
+              {
+                ...skill,
+                category: categoryName,
+                categoryImage: category.categoryImage, // Utiliser l'image de la catégorie
+              },
+            ];
+          }
+        });
+      });
+    });
 
-  const handleSkillClick = (path) => {
-    // Redirige vers la page des utilisateurs pour cette skill
-    navigate(`/skills/${path}`);
+    setCategories(extractedCategories);
+    setSkillsData(extractedSkills);
+  }, []);
+
+  // Fonction pour mélanger un tableau (pour la catégorie "All")
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
   };
 
+  // Filtrage des compétences selon la catégorie sélectionnée
+  let displayedSkills =
+    selectedCategory === "All"
+      ? Object.values(skillsData).flat()
+      : skillsData[selectedCategory] || [];
+
+  // Mélanger les compétences pour "All"
+  if (selectedCategory === "All") {
+    displayedSkills = shuffleArray(displayedSkills);
+  }
+
   return (
-    <div className="discover-container">
-      <header>
-        <h1>Discover</h1>
-        <FilterBar categories={categories} onCategorySelect={setSelectedCategory} />
-      </header>
-      <main>
-        {filteredSkills.length > 0 ? (
-          <SkillGrid skills={filteredSkills} onSkillClick={handleSkillClick} />
-        ) : (
-          <p>No skills available in this category.</p>
-        )}
-      </main>
+    <div className="discover-page">
+      <h1 className="discover-title">Discover Our Skills</h1>
+
+      {/* Composant pour sélectionner une catégorie */}
+      <CategorySelector
+        categories={categories}
+        selectedCategory={selectedCategory}
+        onSelectCategory={setSelectedCategory}
+      />
+
+      {/* Grille des compétences */}
+      <div className="skills-grid">
+        {displayedSkills.map((skill, index) => (
+          <div key={index} className="skill-card">
+            <img
+              src={skill.categoryImage || "default-image.jpg"} // Utiliser l'image de la catégorie
+              alt={skill.nom}
+              className="skill-image"
+            />
+            <h3 className="skill-title">{skill.nom}</h3>
+            <Link to={`/skill-users/${skill.nom}`} className="view-users-link">
+              View Users
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default Discover;

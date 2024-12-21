@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/userHistory.css';
+import avatar1 from '../assets/avatar1.jpg';
 
 const UserHistory = () => {
   const [activeTab, setActiveTab] = useState('learned');
@@ -17,7 +18,7 @@ const UserHistory = () => {
       info: 'Apprentissage des composants, des hooks, et du state management.',
       role: 'Tuteur',
       date: '10 Décembre 2024',
-      image: 'assets/avatar3.png',
+      image: 'avatar1',
     },
     {
       name: 'CSS Responsive Design',

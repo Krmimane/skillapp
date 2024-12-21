@@ -1,0 +1,233 @@
+/* Mobile-specific styles for the chat component */
+.chat-mobile-container {
+  font-family: "Sunflower", arial;
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f9f9f9;
+  height: 98vh;
+  border-radius: 10px;
+}
+.chat-input-mobile {
+  width: 70%;
+}
+.chat-window-mobile {
+  border-radius: 10px !important;
+  background-color: #f8bbd0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.chat-users-horizontal {
+  margin-top: 1rem;
+  border-radius: 10px;
+  /*background-color: #8a6fac #e0cdd4;*/
+  background-color: #faf9f6;
+}
+.chat-header-mobile {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 10px;
+  gap: 0.5rem;
+  font-weight: 800;
+}
+
+.chat-messages-container-mobile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f9f9f9; /* Arrière-plan */
+  border: 1px solid #ddd;
+}
+.chat-message-mobile {
+  margin-bottom: 10px;
+  border-radius: 20px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message-sent-mobile {
+  background-color: #d6e5ff;
+  align-self: flex-end;
+  border-bottom-right-radius: 0 !important;
+  color: #000;
+}
+
+.chat-message-received-mobile {
+  background-color: #f1f0f0;
+  align-self: flex-start;
+  border-bottom-left-radius: 0 !important;
+  color: #000;
+}
+
+.chat-message-text-mobile {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chat-message-timestamp-mobile {
+  font-size: 11px;
+  color: #999;
+
+  display: block;
+  text-align: right;
+}
+
+.chat-input-container-mobile {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input-mobile {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.chat-send-button-mobile {
+  color: #7e26bc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.chat-send-button-mobile:hover {
+  transform: scale(1.2);
+}
+
+/* Horizontal scrolling for user discussions */
+.mobile-chat .chat-users {
+  display: flex;
+  overflow-x: auto;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.mobile-chat .chat-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 80px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+
+.mobile-chat .chat-user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border 0.3s ease-in-out;
+}
+
+.mobile-chat .chat-user:hover img,
+.mobile-chat .chat-user-active img {
+  border: 2px solid #007bff;
+}
+
+.mobile-chat .chat-user-active {
+  color: #007bff;
+}
+
+/* Fenêtre principale des messages */
+.chat-messages-mobile {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Agencement vertical */
+  align-items: flex-start; /* Alignement des messages à gauche par défaut */
+  overflow-y: auto; /* Pour permettre le défilement si nécessaire */
+  padding: 1rem;
+  gap: 1rem; /* Espace entre les messages */
+}
+
+.chat-message-mobile {
+  padding: 0.75rem;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message-sent-mobile {
+  background-color: #d4d4f8;
+  align-self: flex-end; /* Messages envoyés alignés à droite */
+}
+
+.chat-message-received-mobile {
+  background-color: #ffffff;
+  align-self: flex-start; /* Messages reçus alignés à gauche */
+}
+
+.chat-timestamp-mobile {
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.chat-user-item-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  border-bottom: 1px solid #8a6fac;
+  cursor: pointer;
+}
+
+.chat-user-avatar-mobile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-user-details-mobile {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.chat-user-details-mobile strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.chat-last-message-mobile {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-user-badge-mobile .MuiBadge-badge {
+  margin-left: auto;
+  background-color: #8a6fac;
+}
+.chat-back-button-mobile {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out; /* Animation fluide */
+}
+

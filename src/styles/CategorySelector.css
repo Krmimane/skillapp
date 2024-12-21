@@ -1,0 +1,43 @@
+/* CategorySelector.css */
+.category-selector {
+    display: flex;
+    gap: 15px; /* Augmenter l'écart entre les boutons */
+    margin-bottom: 20px;
+    overflow-x: auto; /* Permet le défilement horizontal */
+    padding: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f8f9fa;
+}
+
+.category-selector::-webkit-scrollbar {
+    height: 8px; /* Hauteur de la barre de défilement */
+}
+
+.category-selector::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 4px;
+}
+
+.category-button {
+    flex-shrink: 0; /* Empêche les boutons de rétrécir */
+    padding: 12px 20px; /* Ajuster les paddings pour un meilleur confort visuel */
+    border: none;
+    border-radius: 30px; /* Rendre les boutons encore plus arrondis */
+    background-color: #f8f9fa;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category-button:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+}
+
+.category-button.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

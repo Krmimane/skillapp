@@ -3,7 +3,8 @@ import Statecirc from "../components/statecirc";
 import Statecourbe from "../components/statecourbe";
 import '../styles/dashboard.css';
 import userData from '../data/user_skill.json';
-const Home = () => {
+
+const Home = ({currentUsername}) => {
   const [user, setUser] = useState(userData.users[0]);
   const [formData, setFormData] = useState({ ...user });
   const [isMobile, setIsMobile] = useState(false);
@@ -18,14 +19,14 @@ const Home = () => {
         description: "Apprendre les bases de Python pour l'analyse de données.",
         progress: 40,
         endDate: "2024-12-31",
-        tutorImage: "assets/avatar3.png", // Image du tuteur
+        tutorImage: "C:/Users/DELL/Documents/S3 cl/front end - back end/skillapp/src/assets/avatar1.jpg", 
       },
       {
         name: "Développement Web",
         description: "Créer des sites web dynamiques avec React.",
         progress: 60,
         endDate: "2025-01-15",
-        tutorImage: "assets/avatar6.png",
+        tutorImage: "../assets/avatar6.png",
       },
     ],
     toTeach: [
@@ -45,6 +46,21 @@ const Home = () => {
       },
     ],
   };
+  useEffect(() => {
+    // Charger `currentUsername` depuis le localStorage
+    const savedUsername = localStorage.getItem("currentUser");
+    if (savedUsername) {
+      setFormData((prevData) => ({ ...prevData, username: savedUsername }));
+    }
+  }, []);
+
+  useEffect(() => {
+    // Sauvegarder `currentUsername` dans le localStorage
+    if (currentUsername) {
+      localStorage.setItem("currentUser", currentUsername);
+      setFormData((prevData) => ({ ...prevData, username: currentUsername }));
+    }
+  }, [currentUsername]);
 
   useEffect(() => {
         const handleResize = () => {
@@ -187,6 +203,7 @@ const Home = () => {
               </div>
             </div>
           )}
+          <h3 className="section-title">Weekly Time</h3>
           <MobileSkills />
         </>
       ) : (
@@ -200,9 +217,11 @@ const Home = () => {
 
           <div className="statisticsContainer">
             <div className="stateCircContainer">
+            <h3 className="section-title">Today's Time </h3>
               <Statecirc />
             </div>
             <div className="stateCourbeContainer">
+            <h3 className="section-title">Weekly Time</h3>
               <Statecourbe />
             </div>
           </div>

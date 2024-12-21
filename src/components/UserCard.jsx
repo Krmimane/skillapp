@@ -1,13 +1,21 @@
 import React from "react";
-//import "../styles/UserCard.css";
+import "../styles/UserCard.css";
 
 const UserCard = ({ user }) => {
   return (
     <div className="user-card">
-      <h3>{user.username}</h3>
-      <p>Age: {user.age}</p>
-      <p>Bio: {user.bio}</p>
-      <p>Gender: {user.sexe}</p>
+      <img src={user.photo} alt={user.name} className="user-photo" />
+      <div className="user-info">
+        <h3>{user.name}</h3>
+        <p>{user.jobTitle}</p>
+        <div className="user-skills">
+          {user.categories.map((category, index) => (
+            <span key={index} className="user-skill">
+              {category.skills.map(skill => skill.nom).join(", ")}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

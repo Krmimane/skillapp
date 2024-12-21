@@ -1,0 +1,55 @@
+.skill-users-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Espace uniforme entre les cartes */
+  justify-content: flex-start; /* Aligne les éléments à gauche */
+}
+
+.skill-user-card {
+ 
+  margin-bottom: 20px;  /* Espace entre les lignes de cartes */
+}
+
+@media (max-width: 768px) {
+  .skill-user-card {
+    width: calc(50% - 20px);  /* Deux cartes par ligne sur les tablettes */
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-user-card {
+    width: 100%;  /* Une carte par ligne sur les mobiles */
+  }
+}
+
+  
+  .main-content::-webkit-scrollbar {
+    display: none; /* Cacher la barre de défilement */
+  }
+  /* Améliorer la responsivité des cartes */
+
+  /* Styles pour le titre principal */
+.page-title {
+    text-align: center; /* Centrer horizontalement */
+    font-size: 2.5rem; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur principale */
+    margin: 20px 0; /* Espacement vertical */
+    font-family: 'Poppins', sans-serif; /* Typographie moderne */
+    text-transform: capitalize; /* Premier mot en majuscule */
+    letter-spacing: 1.5px; /* Espacement des lettres */
+    position: relative; /* Nécessaire pour l'effet de soulignement */
+    margin-top:0px;
+  }
+  
+  /* Effet de soulignement élégant */
+  .page-title::after {
+    content: "";
+    width: 80px; /* Largeur de l'élément souligné */
+    height: 4px; /* Épaisseur du soulignement */
+    background-color: #f5e9f7; /* Couleur du soulignement */
+    display: block;
+    margin: 10px auto 0; /* Centrer sous le texte */
+    border-radius: 2px; /* Coins arrondis */
+  }
+  

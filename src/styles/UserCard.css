@@ -1,0 +1,101 @@
+/* UserCard.css */
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  width: 400px;
+  margin: 20px auto;
+}
+
+.user-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #f0f0f0;
+  margin-bottom: 15px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-job {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.user-details {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.user-skills {
+  text-align: left;
+  width: 100%;
+}
+
+.user-skill-category {
+  margin-bottom: 10px;
+}
+
+.user-skill-category h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #333;
+}
+
+.user-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-skill {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.user-actions {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.view-profile {
+  background-color: #007bff;
+}

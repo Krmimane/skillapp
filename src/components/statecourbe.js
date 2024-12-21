@@ -83,15 +83,8 @@ const Statecourbe = ({ isPopup = false }) => {
       maxWidth: "100%",
       boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
       backgroundColor: "#fff",
-      height: "320px", // Hauteur réduite pour mobile
     },
-    title: {
-      fontSize: "18px", // Taille de titre réduite
-      color: "#333",
-      textAlign: "center",
-      marginBottom: "5px",
-      fontWeight: "bold",
-    },
+    
     chartWrapper: {
       width: "100%",
       height: "270px", // Hauteur adaptée pour mobile
@@ -131,11 +124,9 @@ const Statecourbe = ({ isPopup = false }) => {
   return (
     <div style={styles.container}>
       
-      <h3 style={styles.title}>
-        <em>Graphique des Heures Apprises et Enseignées</em>
-      </h3>
+      
       <div style={styles.chartWrapper}>
-        <Line data={data} options={options} />
+        <Line options={options} data={data} />
       </div>
     </div>
   );

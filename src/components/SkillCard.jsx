@@ -1,18 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/SkillCard.css";
 
-const SkillCard = ({ skill }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/skills/${skill.nom}`);
-  };
+const SkillCard = ({ skill, image }) => {
+  const defaultImage = "/images/default-skill.jpg"; // Image par défaut si aucune n'est fournie
 
   return (
-    <div className="skill-card" onClick={handleClick}>
-      <h3>{skill.nom}</h3>
-      <p>{skill.niveau}</p>
+    <div className="skill-card">
+      <img
+        src={image || defaultImage}
+        alt={skill}
+        className="skill-image"
+      />
+      <h3 className="skill-name">{skill}</h3>
     </div>
   );
 };

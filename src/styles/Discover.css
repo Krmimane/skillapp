@@ -1,0 +1,51 @@
+/* Discover.css */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Trois cartes par ligne */
+    gap: 20px; /* Espacement entre les cartes */
+    margin-top: 20px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Assurez-vous que la police Brittany est bien importée */
+@import url('https://fonts.googleapis.com/css2?family=Brittany&display=swap');
+
+.discover-page {
+    text-align: center; /* Centre le contenu de la page */
+    padding: 20px;
+    background-color: #f5e9f7;
+    min-height: 100vh; /* Remplir tout l'écran */
+}
+
+.discover-title {
+    font-family: "Brittany", sans-serif; /* Applique la police Brittany */
+    font-size: 3rem;
+    color: #333;
+    margin-top: 0px;
+    text-transform: uppercase; /* Met le titre en majuscules pour un style plus distinctif */
+    letter-spacing: 2px; /* Ajoute un espacement entre les lettres */
+}
+
+/* Media Query pour plus de responsivité */
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Deux cartes par ligne sur les écrans plus petits */
+    }
+}
+
+@media (max-width: 768px) {
+    .discover-title {
+        font-size: 2.5rem; /* Réduction de la taille du titre sur petits écrans */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Une carte par ligne sur les très petits écrans */
+    }
+}
