@@ -4,7 +4,7 @@ import "../styles/SkillUser.css";
 import { useNavigate } from "react-router-dom";
 
 
-const SkillUser = ({ user, categoryName , setidUserSelected}) => {
+const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
   const [showModal, setShowModal] = useState(false);
   const [showSkillModal, setShowSkillModal] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState(null);
@@ -64,17 +64,26 @@ const SkillUser = ({ user, categoryName , setidUserSelected}) => {
       <div className="skill-user-card" onClick={handleOpenGlobalModal}>
         {/* Profil utilisateur */}
         <div className="profile-header">
-          <Link to={`/user-profile/${user.id}`} className="profile-icon">
-            <div className="profile-image-container">
+        
+            <div className="profile-image-container" onClick={(e) => {
+            setidprofile(user.id);
+            navigate("/userprofile");
+            
+          }}>
               <img
                 src={user.image}
                 alt={`${user.username}'s profile`}
                 className="profile-image"
               />
             </div>
-          </Link>
+
           <div className="username-container">
-            <h3>{user.username}</h3>
+            <h3  onClick={(e) => {
+            setidprofile(user.id);
+            navigate("/userprofile");
+            
+          }}
+          >{user.username}</h3>
           </div>
         </div>
 

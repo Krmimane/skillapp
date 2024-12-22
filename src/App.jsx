@@ -16,6 +16,7 @@ function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [currentUsername, setCurrentUsername] = useState("");
   const [idUserSelected, setidUserSelected] = useState(null);
+  const [idprofile,setidprofile]=useState(0);
 
   useEffect(() => {
     const handleResize = () => {
@@ -64,7 +65,7 @@ function App() {
                       path="profile"
                       element={<Profile currentUsername={currentUsername} />}
                     />
-                    <Route path="userprofile" element={<UserInfo />} />
+                    <Route path="userprofile" element={<UserInfo idprofile={idprofile} />} />
                     <Route
                       path="messages"
                       element={isMobile  ? (
@@ -75,7 +76,7 @@ function App() {
                     }
                     />
                     <Route path="discover" element={<Discover  />} />
-                    <Route path="/skill-users/:skillName" element={<SkillUsersPage setidUserSelected={setidUserSelected} />} />
+                    <Route path="/skill-users/:skillName" element={<SkillUsersPage setidUserSelected={setidUserSelected}  setidprofile={setidprofile}/>} />
                     {/* Redirect to Home for unknown routes */}
                     <Route path="*" element={<Navigate to="/home" />} />
                   </Routes>

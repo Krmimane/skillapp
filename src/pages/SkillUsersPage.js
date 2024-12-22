@@ -4,7 +4,7 @@ import SkillUser from '../components/SkillUser';
 import userSkills from '../data/user_skill.json';
 import "../styles/SkillUsersPage.css";
 
-const SkillUsersPage = ({setidUserSelected}) => {
+const SkillUsersPage = ({setidUserSelected,setidprofile}) => {
   const { skillName } = useParams(); // Récupérer le nom de la compétence depuis l'URL
   const [usersWithSkill, setUsersWithSkill] = useState([]);
 
@@ -25,7 +25,7 @@ const SkillUsersPage = ({setidUserSelected}) => {
       {usersWithSkill.length > 0 ? (
         <div className="skill-users-list">
           {usersWithSkill.map((user) => (
-            <SkillUser key={user.id} user={user} skillName={skillName} setidUserSelected={setidUserSelected} />
+            <SkillUser key={user.id} user={user} skillName={skillName} setidUserSelected={setidUserSelected} setidprofile={setidprofile} />
           ))}
         </div>
       ) : (
