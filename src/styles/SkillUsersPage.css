@@ -1,8 +1,8 @@
 .skill-users-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Espace uniforme entre les cartes */
-  justify-content: flex-start; /* Aligne les éléments à gauche */
+  gap: 0px; /* Espace uniforme entre les cartes */
+  justify-content: space-evenly !important; /* Aligne les éléments à gauche */
 }
 
 .skill-user-card {

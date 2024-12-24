@@ -18,7 +18,7 @@ const setCurrentUser = (username) => {
   localStorage.setItem("currentUsername", username);
 };
 
-const ChatMobile = ({ currentUsername,idUserSelected }) => {
+const ChatMobile = ({ currentUsername,idUserSelected,sethumbon,humbon}) => {
   // État du composant
   const [users, setUsers] = useState([]);
   const [storedCurrentUser, setStoredCurrentUser] = useState(currentUsername);
@@ -69,6 +69,7 @@ const ChatMobile = ({ currentUsername,idUserSelected }) => {
     const storedMessages = JSON.parse(localStorage.getItem("messages")) || [];
     setMessages(storedMessages); // Récupération des messages
   }, []);
+
 
   const getUserIdByUsername = (username) => {
     const user = users.find((u) => u.username === username);
@@ -206,7 +207,7 @@ const ChatMobile = ({ currentUsername,idUserSelected }) => {
                     <div
                       key={user.id}
                       className="chat-user-item-mobile"
-                      onClick={() => handleUserClick(user.username)}
+                      onClick={() =>{ handleUserClick(user.username);sethumbon(0);}}
                     >
                       <img
                         src={user.avatar || "/default-avatar.png"}
@@ -233,7 +234,7 @@ const ChatMobile = ({ currentUsername,idUserSelected }) => {
             <div className="chat-header-mobile">
               <IoMdArrowRoundBack
                 size={25}
-                onClick={() => setSelectedUser(null)}
+                onClick={() => {setSelectedUser(null); sethumbon(null);}}
                 className="chat-back-button-mobile"
               />
               <img

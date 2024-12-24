@@ -1,210 +1,166 @@
+/* Style global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 0;
+}
+
 /* Conteneur de la carte utilisateur */
 .skill-user-card {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  width: 450px;
+  margin: 20px auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  margin: 20px;
 }
 
 .skill-user-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+.user-info29{
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #555;
 }
 
-/* En-tête du profil */
 .profile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative; /* Ajouté pour positionner le bouton de manière absolue */
+  margin-bottom: 15px;
 }
 
-.chat-button {
-  position: absolute;
-  top: 30px; /* Ajustez cette valeur pour le placer plus haut */
-  right: 10px; /* Ajustez cette valeur pour aligner à droite */
-  background-color: transparent;
-  border: none;
-  font-size: 22px; /* Taille par défaut */
-  cursor: pointer;
+.profile-link {
+  display: flex;
+  align-items: center;
 }
 
-.chat-button:hover {
-  color: #0056b3;
-  transform: scale(1.2); /* Effet au survol */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligne les éléments sur la gauche */
+  margin-bottom: 15px;
 }
 
-/* Media queries pour ajustement sur mobile */
-@media screen and (max-width: 768px) {
-  .chat-button {
-    font-size: 18px; /* Réduit la taille sur mobile */
-    top: 8px; /* Ajustez la hauteur pour conserver une bonne position */
-    right: 5px; /* Ajustez selon les besoins */
-  }
-}
-
-
-/* Conteneur de l'image du profil */
 .profile-image-container {
-  display: flex;
-  margin-right: 10px;
-}
-
-.profile-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd;
+  overflow: hidden;
+  margin-right: 15px; /* Espacement entre l'image et le nom d'utilisateur */
 }
 
-/* Conteneur du nom d'utilisateur */
 .username-container {
-  flex-grow: 1;
-}
-
-.username-container h3 {
-  font-size: 1.3rem;
-  color: #333;
-  margin: 0;
-  cursor: pointer;
-  margin-left: 0; /* Correction de la syntaxe */
-  text-align: left; /* Aligner le texte à gauche */
-  transition: color 0.3s ease;
-}
-
-.username-container h3:hover {
-  color: #007bff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #181717;
 }
 
 
-
-/* Informations personnelles */
 .user-info {
-  margin-top: 10px;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #555;
 }
 
-.user-info h4 {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.user-info .info-row {
-  display: flex;
-  gap: 15px;
-}
-
-.user-info p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Bio */
 .bio-section {
-  margin-top: 10px;
-}
-
-.bio-section h4 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.bio-section p {
   font-size: 1rem;
   color: #666;
-  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-/* Skills */
 .skills-section {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .skills-section h4 {
   font-size: 1.1rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
 }
-
-.skills-title {
-  font-size: 1.5rem; /* Taille de la police */
-  color: #333; /* Couleur du texte */
-  margin: 0; /* Enlève les marges par défaut */
-  padding: 0; /* Enlève les espacements internes */
-  text-align: left; /* Aligner le texte à gauche */
- 
-}
-
-
 
 .skills-list {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px; /* Espacement entre chaque compétence */
+  padding: 10px;
 }
 
-.skill-button {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+.skill-item {
+ 
+  background-color: #fff; /* Fond clair pour démarquer chaque compétence */
+  padding: 10px;
+  border-radius: 8px; /* Coins arrondis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour de la profondeur */
+}
+
+.skill-name {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333; /* Couleur sombre pour le nom */
+  margin-bottom: 5px; /* Espacement entre le nom et la description */
+  margin-top: 0%;
+}
+
+.skill-description {
+  font-size: 0.95em;
+  color: #555; /* Couleur légèrement atténuée pour la description */
+  margin: 0;
+}
+
+.chat-button {
+  position: absolute; /* Position relative à la carte */
+  top: 35px; /* Alignement en haut */
+  right: 10px; /* Alignement à droite */
+  background-color: transparent;
   border: none;
+  font-size: 22px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chat-button:hover {
+  color: #522854;
+  transform: scale(1.2); /* Effet d'agrandissement au survol */
+}
+
+
+.skill-button {
+  background-color: #ad85b5;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .skill-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
+  background-color: #693774;
+  transform: scale(1.05);
 }
 
-/* Modal background */
-/* Styles généraux de la modal */
-/* Styles généraux de la modal */
+/* Modal */
 .modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Assombrit l'arrière-plan */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
-  overflow: auto;
-  transition: background 0.3s ease;
 }
 
-/* Contenu de la modal */
-.modal-content {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 12px;
-  width: 80%;
-  max-width: 450px;
-  height: auto;
-  text-align: center;
-  box-sizing: border-box;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeIn 0.5s ease-out;
-}
 
-/* Animation d'apparition */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -216,136 +172,201 @@
   }
 }
 
-/* Bouton de fermeture */
 .close {
   font-size: 30px;
   color: #aaa;
   cursor: pointer;
-  justify-content: right;
-  top: 5px;
-  right: 300px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 
 .close:hover {
-  color: black;
-  text-decoration: none;
+  color: #333;
 }
 
-/* Profil utilisateur dans la modal */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999;
+  padding: 20px; /* Space around the modal content */
+}
+
+.modal-content {
+  background-color: white;
+ 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow:auto;
+  max-width: 700px;
+  width: 80%;
+}
+
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+
 .user-profile-info {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  justify-content: flex-start;
+  margin-bottom: 5px;
 }
 
 .profile-image-container {
-  margin-right: 15px;
-}
-
-.profile-image {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.profile-image-container img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 3px solid #ddd;
 }
 
-/* Titre de la modal */
-.modal-title {
-  font-size: 1.5rem;
-  font-weight: bold;
+.username-container h3 {
+  font-size: 1.3rem;
   color: #333;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
-/* Liste des points clés dans la modal */
-.modal-body ul {
-  list-style-type: disc;
-  margin: 0 auto;
-  padding-left: 20px;
-  text-align: left;
-  max-width: 500px;
-}
-
-.modal-body ul li {
-  margin-bottom: 10px;
+.skill-detail {
+  margin-bottom: 20px;
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
 }
 
+.skill-detail h5 {
+  font-weight: bold;
+  color: #6b4b71;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  color: #000000;
+  margin: 10px 0;
+}
+
 .modal-body p {
+  color: #888;
   font-size: 1rem;
-  color: #666;
   line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-/* Button to action or close in the modal */
-.modal-action-button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #007bff;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 20px;
+.modal-body li {
+  margin-bottom: 8px;
 }
 
-.modal-action-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-3px);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+    padding: 20px; /* Space around the modal content */
+  }
+
   .modal-content {
     width: 90%;
+    max-width: 500px; /* Maximum width for the modal */
     padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    margin: auto; /* Center the modal-content */
+  }
+
+  .user-profile-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image-container {
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+  }
+
+  .username-container h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .skill-detail {
+    font-size: 0.9rem;
   }
 
   .modal-body ul {
     padding-left: 15px;
   }
 
-  .profile-image {
-    width: 60px;
-    height: 60px;
-  }
-
-  .modal-title {
-    font-size: 1.3rem;
+  .skills-section h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333;
   }
 }
 
-/* For the skill-specific modal */
-.modal-body h5 {
-  font-size: 1.2rem;
-  color: #333;
-  margin-top: 20px;
+
+
+
+
+
+/* Adding smooth transition for modal */
+.modal-body, .modal-content {
+  transition: all 0.3s ease-in-out;
 }
 
-.skill-detail {
-  margin-top: 20px;
-  text-align: center;
+ /* Suppression de l'apparence par défaut du lien */
+.profile-link,
+.username-link {
+  text-decoration: none; /* Enlève le soulignement */
+  cursor: pointer; /* Garde le curseur pointeur pour signifier que c'est cliquable */
 }
 
-.skill-detail h5 {
-  font-size: 1.1rem;
-  color: #333;
+/* Tu peux aussi ajouter des styles au survol */
+.profile-link:hover,
+.username-link:hover {
+  opacity: 0.8; /* Légère transparence quand tu survoles */
+  color: #181717;
 }
-
-.skill-detail ul {
-  list-style-type: circle;
-  padding-left: 20px;
-}
-
-.skill-detail ul li {
-  color: #666;
-  font-size: 1rem;
-}
-

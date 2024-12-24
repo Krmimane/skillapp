@@ -6,7 +6,7 @@
     overflow-x: auto; /* Permet le défilement horizontal */
     padding: 10px;
     scrollbar-width: thin;
-    scrollbar-color: #007bff #f8f9fa;
+    scrollbar-color: #522854 #f8f9fa;
 }
 
 .category-selector::-webkit-scrollbar {
@@ -14,7 +14,7 @@
 }
 
 .category-selector::-webkit-scrollbar-thumb {
-    background-color: #007bff;
+    background-color: #522854;
     border-radius: 4px;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .category-button.active {
-    background-color: #007bff;
+    background-color: #522854;
     color: white;
     font-weight: 600;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

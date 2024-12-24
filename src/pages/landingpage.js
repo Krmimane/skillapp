@@ -7,11 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../styles/LandingPage.css";
 import Modal from "react-modal";
-import logo from "../assets/logo2.png";
-import skill1 from "../assets/blacksing.png";
-import skill2 from "../assets/designer2.png";
-import skill3 from "../assets/photo.png";
-import skill4 from "../assets/painterft.png";
+
 import { useNavigate } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 Modal.setAppElement("#root");
@@ -52,22 +48,22 @@ const LandingPage = ({ setCurrentUsername }) => {
 
   const skills = [
     {
-      image: skill1,
+      image: "/assets/blacksing.png",
       title: "Singing",
       description: "Learn singing techniques from experts.",
     },
     {
-      image: skill2,
+      image: "/assets/designer2.png",
       title: "Designing",
       description: "Improve your design skills with peer feedback.",
     },
     {
-      image: skill3,
+      image: "/assets/photo.png",
       title: "Photography",
       description: "Master photography through skill exchange.",
     },
     {
-      image: skill4,
+      image: "/assets/painterft.png",
       title: "Painting",
       description: "Explore painting styles from other users.",
     },
@@ -134,7 +130,7 @@ const LandingPage = ({ setCurrentUsername }) => {
           <header className="headerlp">
             <div className="logo-container">
               <img
-                src={logo}
+                src="/assets/logo3.png"
                 alt="Logo"
                 className="logo"
                 style={{ height: "3.5rem", width: "3.5rem" }}

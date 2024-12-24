@@ -87,9 +87,8 @@ const Discover = () => {
               className="skill-image"
             />
             <h3 className="skill-title">{skill.nom}</h3>
-            <Link to={`/skill-users/${skill.nom}`} className="view-users-link">
-              View Users
-            </Link>
+            <Link to={`/skill-users/${skill.nom}`} className="view-users-button12">
+              View Users</Link>
           </div>
         ))}
       </div>

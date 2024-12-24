@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../styles/SkillUser.css";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineMessage } from "react-icons/ai";
 
 
 const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
@@ -71,7 +72,7 @@ const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
             
           }}>
               <img
-                src={user.image}
+                src={user.avatar}
                 alt={`${user.username}'s profile`}
                 className="profile-image"
               />
@@ -97,23 +98,33 @@ const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
             
           }}
         >
-          💬
+          <AiOutlineMessage />
         </button>
 
         {/* Informations personnelles */}
         <div className="user-info">
           <h4>Informations Personnelles</h4>
-          <div className="info-row">
-            <p><strong>Age:</strong> {user.age}</p>
-            <p><strong>Sexe:</strong> {user.sexe === "M" ? "Male" : "Female"}</p>
-          </div>
+          <div className="user-info29">
+        <h4>Age: {user.age} | Sexe: {user.sexe === "M" ? "Male" : "Female"}</h4>
+        </div>
         </div>
 
-        {/* Bio utilisateur */}
-        <div className="bio-section">
-          <h4>Bio:</h4>
-          <p>{user.bio || "Aucune bio disponible."}</p>
-        </div>
+        <h4>Description :</h4>
+      <div className="skills-list">
+        {skillsInCategory.length > 0 ? (
+          skillsInCategory.map((skill, index) => (
+            <div key={index} className="skill-item">
+              <h5 className="skill-name">{skill.nom}</h5> {/* Affiche le nom de la compétence */}
+              {skill.description && (
+                <p className="skill-description">{skill.description}</p>
+              )}
+            </div>
+          ))
+        ) : (
+          <p>Aucune compétence disponible dans cette catégorie.</p>
+        )}
+      </div>
+
 
         {/* Liste des compétences de la catégorie spécifiée */}
         <div className="skills-section">
@@ -136,28 +147,31 @@ const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
         </div>
       </div>
 
-      {/* Modal spécifique au skill */}
-      {showSkillModal && selectedSkill && (
+     {showSkillModal && selectedSkill && (
         <div className="modal" onClick={handleOutsideClick}>
           <div className="modal-content">
             <span className="close" onClick={closeSkillModal}>&times;</span>
             <div className="modal-body">
               <div className="user-profile-info">
                 <div className="profile-image-container">
-                  <img
-                    src={user.image}
-                    alt={`${user.username}'s profile`}
-                    className="profile-image"
-                  />
+                  <Link to={`/profile/${user.username}`} className="profile-link">
+                    <img
+                      src={user.avatar}
+                      alt={`${user.username}'s profile`}
+                      className="profile-image"
+                    />
+                  </Link>
                 </div>
                 <div className="username-container">
-                  <h3>{user.username}</h3>
+                  <Link to={`/profile/${user.username}`} className="username-link">
+                    <h3>{user.username}</h3>
+                  </Link>
                 </div>
               </div>
               <h5>{selectedSkill.nom} - {selectedSkill.niveau}</h5>
-              {selectedSkill.key_points && selectedSkill.key_points.length > 0 ? (
+              {selectedSkill.keyPoints && selectedSkill.keyPoints.length > 0 ? (
                 <ul>
-                  {selectedSkill.key_points.map((point, idx) => (
+                  {selectedSkill.keyPoints.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}
                 </ul>
@@ -169,7 +183,6 @@ const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
         </div>
       )}
 
-      {/* Modal global avec toutes les compétences et leurs points clés */}
       {showModal && selectedSkills.length > 0 && (
         <div className="modal" onClick={handleOutsideClick}>
           <div className="modal-content">
@@ -177,23 +190,27 @@ const SkillUser = ({ user, categoryName , setidUserSelected,setidprofile}) => {
             <div className="modal-body">
               <div className="user-profile-info">
                 <div className="profile-image-container">
-                  <img
-                    src={user.image}
-                    alt={`${user.username}'s profile`}
-                    className="profile-image"
-                  />
+                  <Link to={`/profile/${user.username}`} className="profile-link">
+                    <img
+                      src={user.avatar}
+                      alt={`${user.username}'s profile`}
+                      className="profile-image"
+                    />
+                  </Link>
                 </div>
                 <div className="username-container">
-                  <h3>{user.username}</h3>
+                  <Link to={`/profile/${user.username}`} className="username-link">
+                    <h3>{user.username}</h3>
+                  </Link>
                 </div>
               </div>
-              <h4 className="skills-title">Compétences et Points Clés :</h4>
+              <h2>Compétences et Points Clés :</h2>
               {selectedSkills.map((skill, index) => (
                 <div key={index} className="skill-detail">
                   <h5>{skill.nom} - {skill.niveau}</h5>
-                  {skill.key_points && skill.key_points.length > 0 ? (
+                  {skill.keyPoints && skill.keyPoints.length > 0 ? (
                     <ul>
-                      {skill.key_points.map((point, idx) => (
+                      {skill.keyPoints.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
                     </ul>

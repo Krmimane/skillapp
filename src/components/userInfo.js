@@ -1,6 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
 import '../styles/userInfo.css'; // Importation CSS
 import userData from '../data/user_skill.json'; // Importation des données utilisateur
+
+const SkillCard = ({ name, info, role, date, image }) => (
+  <div className="skillCard21">
+    <img src={image} alt="Avatar" className="skillImage21" />
+    <div className="skillContent21">
+      <div className="skillHeader21">
+        <h3 className="skillName21">{name}</h3>
+      </div>
+      <p className="skillInfo21">{info}</p>
+      <div className="skillFooter21">
+        <span className="userRole21">{role}</span>
+        <span className="skillDate21">{date}</span>
+      </div>
+    </div>
+  </div>
+);
 
 const UserInfo = ({ idprofile }) => {
   const [user, setUser] = useState(null);
@@ -13,26 +29,43 @@ const UserInfo = ({ idprofile }) => {
   }, [idprofile]); // Recharger les données lorsque l'ID change
 
   const learnedSkills = [
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
-    { name: 'Skill Name', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
+    {
+      name: 'JavaScript Basics',
+      info: 'Introduction aux concepts de base comme les variables, les boucles, et les fonctions.',
+      role: 'HealthyVibes',
+      date: '15 Décembre 2024',
+      image: '../assets/avatarheakth.png',
+    },
+    {
+      name: 'React Fundamentals',
+      info: 'Apprentissage des composants, des hooks, et du state management.',
+      role: 'TravelerSpirit',
+      date: '10 Décembre 2024',
+      image: '../assets/avatarr.png',
+    },
+    {
+      name: 'Python Data Analysis',
+      info: 'Utilisation de Python pour manipuler et analyser des ensembles de données.',
+      role: 'NatureLover',
+      date: '15 Novembre 2024',
+      image: 'assets/avatar10.png',
+    },
   ];
 
   const taughtSkills = [
-    { name: 'info', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date' },
+    { name: 'info', info: 'Information sur utilisateur', role: 'Tuteur', date: 'date', image: 'https://via.placeholder.com/60' },
   ];
 
   const renderSkills = (skills) => (
     skills.map((skill, index) => (
-      <div key={index} className="skill-card">
-        <div className="skill-header">
-          <strong>{skill.name}</strong>
-          <p>{skill.info}</p>
-        </div>
-        <div className="skill-footer">
-          <span className="user-role">{skill.role}</span>
-          <span className="skill-date">{skill.date}</span>
-        </div>
-      </div>
+      <SkillCard
+        key={index}
+        name={skill.name}
+        info={skill.info}
+        role={skill.role}
+        date={skill.date}
+        image={skill.image}
+      />
     ))
   );
 
@@ -79,7 +112,7 @@ const UserInfo = ({ idprofile }) => {
 
       {/* Section historique */}
       <h3 className="section-title">Formations Disponibles</h3>
-      <div className="history-content">
+      <div className="historyContent21">
         {activeTab === 'learned' && renderSkills(learnedSkills)}
         {activeTab === 'taught' && renderSkills(taughtSkills)}
       </div>

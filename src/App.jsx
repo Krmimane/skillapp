@@ -17,6 +17,8 @@ function App() {
   const [currentUsername, setCurrentUsername] = useState("");
   const [idUserSelected, setidUserSelected] = useState(null);
   const [idprofile,setidprofile]=useState(0);
+  const [humbon,sethumbon]=useState(null);
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -57,7 +59,7 @@ function App() {
             path="/*"
             element={
               <>
-                <SlideBar isMobile={isMobile} />
+                <SlideBar isMobile={isMobile} humbon={humbon} />
                 <MainContentWrapper>
                   <Routes>
                     <Route path="home" element={<Home  currentUsername={currentUsername}/>} />
@@ -69,7 +71,7 @@ function App() {
                     <Route
                       path="messages"
                       element={isMobile  ? (
-                        <ChatMobile currentUsername={currentUsername} idUserSelected={idUserSelected} />
+                        <ChatMobile currentUsername={currentUsername} idUserSelected={idUserSelected}  sethumbon={sethumbon} humbon={humbon}/>
                       ) : (
                         <Messages currentUsername={currentUsername} idUserSelected={idUserSelected} />
                       )

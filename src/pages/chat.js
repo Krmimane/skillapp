@@ -4,6 +4,7 @@ import Badge from "@mui/material/Badge";
 import { IoSend } from "react-icons/io5";
 import { FiSearch } from "react-icons/fi";
 import userSkill from "../data/user_skill.json"; // Importation directe du fichier JSON
+import skill4 from "../assets/convo.png";
 
 const Chat = ({ currentUsername ,idUserSelected}) => {
   const [storedCurrentUser, setStoredCurrentUser] = useState(currentUsername);
@@ -254,7 +255,15 @@ const Chat = ({ currentUsername ,idUserSelected}) => {
             </div>
           </>
         ) : (
-          <p>Sélectionnez une discussion.</p>
+          <div style ={{display:"flex",flexDirection:"column",gap:"1rem",justifyContent:"center",alignItems:"center",marginTop:"11rem"}}
+          >
+                    <img
+                      src={skill4}
+                      alt={"skill4"}
+                      style ={{height:"15rem",width:"20rem"}}
+                    />
+                    <h2 style={{fontweight:"800"}}>Start conversation now !</h2>
+          </div>
         )}
       </div>
     </div>

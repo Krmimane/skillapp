@@ -11,20 +11,56 @@
           "category": "Technologie et Informatique",
           "categoryImage": "https://i.pinimg.com/736x/c0/d4/33/c0d43305f8a5fb58300433c84dfeff76.jpg",
           "skills": [
-            { "nom": "Programmation Python", "niveau": "Expert" },
-            { "nom": "Développement web", "niveau": "Avancé" }
+            { 
+              "nom": "Programmation Python", 
+              "niveau": "Expert", 
+              "description": "Maîtrise du langage Python pour le développement d'applications, analyse de données et intelligence artificielle.",
+              "keyPoints": [
+                "Maîtrise des bibliothèques comme NumPy, pandas, et TensorFlow.",
+                "Expérience avec des projets d'intelligence artificielle et machine learning.",
+                "Développement d'applications web avec Flask et Django."
+              ]
+            },
+            { 
+              "nom": "Développement web", 
+              "niveau": "Avancé", 
+              "description": "Connaissance approfondie des technologies web comme HTML, CSS, JavaScript et frameworks comme React.",
+              "keyPoints": [
+                "Conception de sites web réactifs et adaptatifs.",
+                "Utilisation de React pour la création d'interfaces utilisateurs dynamiques.",
+                "Maîtrise des API REST et gestion des bases de données avec MongoDB."
+              ]
+            }
           ]
         },
         {
           "category": "Langues",
           "categoryImage": "https://i.pinimg.com/736x/98/73/80/9873807841c87713a5ce9438c30c33d8.jpg",
           "skills": [
-            { "nom": "Anglais", "niveau": "Intermédiaire" },
-            { "nom": "Espagnol", "niveau": "Débutant" }
+            { 
+              "nom": "Anglais", 
+              "niveau": "Intermédiaire", 
+              "description": "Capacité à communiquer dans un environnement professionnel en anglais.",
+              "keyPoints": [
+                "Rédaction de documents techniques en anglais.",
+                "Capacité à mener des réunions professionnelles en anglais.",
+                "Compréhension de films et podcasts en anglais."
+              ]
+            },
+            { 
+              "nom": "Espagnol", 
+              "niveau": "Débutant", 
+              "description": "Connaissance basique de la langue espagnole, capacité à comprendre et participer à des conversations simples.",
+              "keyPoints": [
+                "Apprentissage des bases de la grammaire espagnole.",
+                "Pratique orale avec des locuteurs natifs.",
+                "Compréhension des expressions courantes en espagnol."
+              ]
+            }
           ]
         }
       ],
-      "avatar": "../src/assets/avatar1.jpg"
+      "avatar": "../assets/avatar1.jpg"
     },
     {
       "id": 2,
@@ -37,19 +73,46 @@
           "category": "Cuisine et Gastronomie",
           "categoryImage": "https://i.pinimg.com/736x/76/ae/8d/76ae8dfe3faf76d61cb5c994bade1db5.jpg",
           "skills": [
-            { "nom": "Pâtisserie", "niveau": "Expert" },
-            { "nom": "Cuisine italienne", "niveau": "Avancé" }
+            { 
+              "nom": "Pâtisserie", 
+              "niveau": "Expert", 
+              "description": "Expertise dans la préparation de desserts, gâteaux et pâtisseries fines.",
+              "keyPoints": [
+                "Création de gâteaux à plusieurs étages.",
+                "Expertise en décorations de pâtisseries.",
+                "Maîtrise des techniques de pâte sucrée et sablée."
+              ]
+            },
+            { 
+              "nom": "Cuisine italienne", 
+              "niveau": "Avancé", 
+              "description": "Connaissance approfondie des plats traditionnels italiens comme les pâtes, les pizzas et les sauces.",
+              "keyPoints": [
+                "Préparation de sauces italiennes classiques comme la marinara et le pesto.",
+                "Connaissance des techniques de cuisson des pâtes fraîches et sèches.",
+                "Création de pizzas artisanales avec pâte maison."
+              ]
+            }
           ]
         },
         {
           "category": "Développement Personnel",
           "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
           "skills": [
-            { "nom": "Gestion du temps", "niveau": "Intermédiaire" }
+            { 
+              "nom": "Gestion du temps", 
+              "niveau": "Intermédiaire", 
+              "description": "Capacité à organiser efficacement son emploi du temps pour maximiser la productivité.",
+              "keyPoints": [
+                "Utilisation de la méthode Pomodoro pour améliorer la concentration.",
+                "Gestion des priorités et des tâches urgentes.",
+                "Optimisation des plages horaires pour le travail créatif."
+              ]
+            }
           ]
         }
       ],
-      "avatar": "../src/assets/avatar2.png"
+      "avatar": "../assets/avatar2.jpg"
     },
     {
       "id": 3,
@@ -62,19 +125,46 @@
           "category": "Langues",
           "categoryImage": "https://i.pinimg.com/736x/98/73/80/9873807841c87713a5ce9438c30c33d8.jpg",
           "skills": [
-            { "nom": "Mandarin", "niveau": "Avancé" },
-            { "nom": "Français", "niveau": "Expert" }
+            { 
+              "nom": "Mandarin", 
+              "niveau": "Avancé", 
+              "description": "Maîtrise de la langue chinoise, capable de converser couramment en mandarin.",
+              "keyPoints": [
+                "Capacité à converser sur des sujets variés tels que les affaires et la culture.",
+                "Compréhension des caractères chinois traditionnels et simplifiés.",
+                "Lecture de textes chinois complexes."
+              ]
+            },
+            { 
+              "nom": "Français", 
+              "niveau": "Expert", 
+              "description": "Langue maternelle, capacité à parler et à écrire en français avec aisance.",
+              "keyPoints": [
+                "Rédaction d'articles et de rapports en français.",
+                "Communication orale et écrite fluide.",
+                "Expertise dans la littérature et la culture française."
+              ]
+            }
           ]
         },
         {
           "category": "Arts et Création",
-          "categoryImage": "../src/assets/category_arts.jpg",
+          "categoryImage": "https://i.pinimg.com/736x/99/e3/1d/99e31d1b532d03738ee9a4d0db968276.jpg",
           "skills": [
-            { "nom": "Écriture créative", "niveau": "Intermédiaire" }
+            { 
+              "nom": "Écriture créative", 
+              "niveau": "Intermédiaire", 
+              "description": "Capacité à rédiger des histoires, poèmes et textes originaux.",
+              "keyPoints": [
+                "Création de personnages et de dialogues captivants.",
+                "Exploration de différents genres littéraires.",
+                "Rédaction de textes pour des blogs et des publications."
+              ]
+            }
           ]
         }
       ],
-      "avatar": "../src/assets/avatar3.png"
+      "avatar": "../assets/avatar3.png"
     },
     {
       "id": 4,
@@ -87,19 +177,46 @@
           "category": "Bricolage et DIY",
           "categoryImage": "https://i.pinimg.com/736x/5a/de/2f/5ade2f6e4ffc7c74845b651d3e702888.jpg",
           "skills": [
-            { "nom": "Réparation d'appareils", "niveau": "Avancé" },
-            { "nom": "Couture", "niveau": "Débutant" }
+            { 
+              "nom": "Réparation d'appareils", 
+              "niveau": "Avancé", 
+              "description": "Expertise dans la réparation d'équipements électroniques et électroménagers.",
+              "keyPoints": [
+                "Diagnostic des pannes électroniques complexes.",
+                "Réparation de cartes électroniques et composants.",
+                "Restauration d'appareils électroménagers de toutes marques."
+              ]
+            },
+            { 
+              "nom": "Couture", 
+              "niveau": "Débutant", 
+              "description": "Capacité à coudre des vêtements de base et effectuer des retouches simples.",
+              "keyPoints": [
+                "Apprentissage des bases de la couture à la main et à la machine.",
+                "Réalisation de retouches simples comme raccourcir des pantalons.",
+                "Création de petits accessoires en tissu."
+              ]
+            }
           ]
         },
         {
           "category": "Sport et Bien-être",
           "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg",
           "skills": [
-            { "nom": "Yoga", "niveau": "Intermédiaire" }
+            { 
+              "nom": "Yoga", 
+              "niveau": "Intermédiaire", 
+              "description": "Pratique du yoga pour améliorer la flexibilité et le bien-être général.",
+              "keyPoints": [
+                "Maîtrise des postures de base et intermédiaires.",
+                "Amélioration de la souplesse et de l'équilibre.",
+                "Pratique de la méditation et relaxation."
+              ]
+            }
           ]
         }
       ],
-      "avatar": "../src/assets/avatar4.png"
+      "avatar": "../assets/avatar4.png"
     },
     {
       "id": 5,
@@ -110,190 +227,377 @@
       "categories": [
         {
           "category": "Technologie et Informatique",
-          "categoryImage": "../src/assets/category_tech.jpg",
+          "categoryImage": "https://i.pinimg.com/736x/c0/d4/33/c0d43305f8a5fb58300433c84dfeff76.jpg",
           "skills": [
-            { "nom": "Cybersécurité", "niveau": "Expert" },
-            { "nom": "Bases de données", "niveau": "Avancé" }
+            { 
+              "nom": "Cybersécurité", 
+              "niveau": "Expert", 
+              "description": "Expertise dans la protection des systèmes d'information contre les cyberattaques.",
+              "keyPoints": [
+                "Audit de sécurité des systèmes informatiques.",
+                "Protection contre les malwares et attaques DDoS.",
+                "Mise en place de politiques de sécurité pour les entreprises."
+              ]
+            },
+            { 
+              "nom": "Bases de données", 
+              "niveau": "Avancé", 
+              "description": "Gestion et analyse des bases de données relationnelles et NoSQL.",
+              "keyPoints": [
+                "Conception et optimisation de bases de données relationnelles.",
+                "Utilisation de MongoDB et autres bases NoSQL.",
+                "Développement de requêtes SQL complexes."
+              ]
+            }
           ]
         },
         {
           "category": "Business et Entrepreneuriat",
-          "categoryImage": "../src/assets/category_business.jpg",
+          "categoryImage": "https://i.pinimg.com/736x/cf/72/22/cf7222239de1f170a4344027eda22597.jpg",
           "skills": [
-            { "nom": "Marketing digital", "niveau": "Intermédiaire" }
+            { 
+              "nom": "Marketing digital", 
+              "niveau": "Intermédiaire", 
+              "description": "Stratégies de marketing sur les réseaux sociaux, SEO et campagnes publicitaires en ligne.",
+              "keyPoints": [
+                "Gestion des campagnes publicitaires sur Google Ads et Facebook.",
+                "Optimisation du SEO pour les sites web et blogs.",
+                "Analyse des données marketing et des résultats."
+              ]
+            }
           ]
         }
       ],
-      "avatar": "../src/assets/avatar5.png"
+      "avatar": "../assets/avatar5.png"
     },
+  {
+  "id": 6,
+  "username": "ArtDreamer",
+  "age": 26,
+  "sexe": "F",
+  "bio": "Artiste passionnée par les créations originales.",
+  "categories": [
     {
-      "id": 6,
-      "username": "ArtDreamer",
-      "age": 26,
-      "sexe": "F",
-      "bio": "Artiste passionnée par les créations originales.",
-      "categories": [
+      "category": "Arts et Création",
+      "categoryImage": "https://i.pinimg.com/736x/99/e3/1d/99e31d1b532d03738ee9a4d0db968276.jpg",
+      "skills": [
         {
-          "category": "Arts et Création",
-          "categoryImage": "../src/assets/category_arts.jpg",
-          "skills": [
-            { "nom": "Dessin numérique", "niveau": "Avancé" },
-            { "nom": "Photographie", "niveau": "Intermédiaire" }
+          "nom": "Dessin numérique",
+          "niveau": "Avancé",
+          "description": "Création d'illustrations numériques à l'aide de logiciels comme Photoshop et Illustrator.",
+          "keyPoints": [
+            "Maîtrise des logiciels de dessin numérique",
+            "Capacité à créer des œuvres visuelles uniques et créatives"
           ]
         },
         {
-          "category": "Développement Personnel",
-          "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
-          "skills": [
-            { "nom": "Méditation", "niveau": "Débutant" }
+          "nom": "Photographie",
+          "niveau": "Intermédiaire",
+          "description": "Capture d'images de qualité et traitement des photos avec des outils professionnels.",
+          "keyPoints": [
+            "Compétences en prise de vue et composition",
+            "Connaissance des techniques de retouche photo"
           ]
         }
-      ],
-      "avatar": "../src/assets/avatar6.png"
+      ]
     },
     {
-      "id": 7,
-      "username": "SportFanatic",
-      "age": 29,
-      "sexe": "M",
-      "bio": "Coach sportif dédié à la transformation physique.",
-      "categories": [
+      "category": "Développement Personnel",
+      "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
+      "skills": [
         {
-          "category": "Sport et Bien-être",
-          "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg",
-          "skills": [
-            { "nom": "Coaching fitness", "niveau": "Expert" },
-            { "nom": "Nutrition sportive", "niveau": "Avancé" }
-          ]
-        },
-        {
-          "category": "Développement Personnel",
-          "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
-          "skills": [
-            { "nom": "Motivation", "niveau": "Intermédiaire" }
+          "nom": "Méditation",
+          "niveau": "Débutant",
+          "description": "Pratique de la méditation pour la gestion du stress et la relaxation.",
+          "keyPoints": [
+            "Apprentissage des bases de la méditation",
+            "Techniques pour réduire le stress et améliorer la concentration"
           ]
         }
-      ],
-      "avatar": "../src/assets/avatar7.png"
-    },
-    {
-      "id": 8,
-      "username": "EcoWarrior",
-      "age": 24,
-      "sexe": "F",
-      "bio": "Passionnée par la durabilité et les projets verts.",
-      "categories": [
-        {
-          "category": "Bricolage et DIY",
-          "categoryImage": "https://i.pinimg.com/736x/5a/de/2f/5ade2f6e4ffc7c74845b651d3e702888.jpg",
-          "skills": [
-            { "nom": "Fabrication d'objets recyclés", "niveau": "Avancé" },
-            { "nom": "Conception écologique", "niveau": "Intermédiaire" }
-          ]
-        },
-        {
-          "category": "Développement Personnel",
-          "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
-          "skills": [
-            { "nom": "Gestion de projets", "niveau": "Intermédiaire" }
-          ]
-        }
-      ],
-      "avatar": "../src/assets/avatar8.png"
-    },
-    {
-      "id": 9,
-      "username": "MusicProd",
-      "age": 32,
-      "sexe": "M",
-      "bio": "Producteur de musique et compositeur passionné.",
-      "categories": [
-        {
-          "category": "Arts et Création",
-          "categoryImage": "../src/assets/categories/arts_creation.jpg", 
-          "skills": [
-            { "nom": "Composition musicale", "niveau": "Expert" },
-            { "nom": "Mixage audio", "niveau": "Avancé" }
-          ]
-        },
-        {
-          "category": "Technologie et Informatique",
-          "categoryImage": "../src/assets/categories/arts_creation.jpg", 
-          "skills": [
-            { "nom": "Logiciels audio", "niveau": "Intermédiaire" }
-          ]
-        }
-      ],
-      "avatar": "../src/assets/avatar9.png"
-    },
-    {
-      "id": 10,
-      "username": "NatureLover",
-      "age": 27,
-      "sexe": "F",
-      "bio": "Guide touristique spécialisée en randonnées.",
-      "categories": [
-        {
-          "category": "Sport et Bien-être",
-          "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg", 
-          "skills": [
-            { "nom": "Randonnée", "niveau": "Expert" },
-            { "nom": "Cartographie", "niveau": "Avancé" }
-          ]
-        },
-        {
-          "category": "Langues",
-          "categoryImage": "https://i.pinimg.com/736x/98/73/80/9873807841c87713a5ce9438c30c33d8.jpg", 
-          "skills": [
-            { "nom": "Italien", "niveau": "Débutant" }
-          ]
-        }
-      ],
-      "avatar": "../src/assets/avatar10.png"
-    },
-    {
-      "id": 11,
-      "username": "TravelerSpirit",
-      "age": 34,
-      "sexe": "M",
-      "bio": "Explorateur de cultures et partageur de compétences.",
-      "categories": [
-        {
-          "category": "Langues",
-          "categoryImage": "../src/assets/categories/arts_creation.jpg", 
-          "skills": [
-            { "nom": "Espagnol", "niveau": "Avancé" },
-            { "nom": "Anglais", "niveau": "Intermédiaire" }
-          ]
-        },
-        {
-          "category": "Développement Personnel",
-          "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
-          "skills": [
-            { "nom": "Gestion du stress", "niveau": "Débutant" }
-          ]
-        }
-      ],
-      "avatar": "../src/assets/avatarr.png"
-    },
-    {
-      "id": 12,
-      "username": "HealthyVibes",
-      "age": 28,
-      "sexe": "F",
-      "bio": "Passionnée par le bien-être et les solutions naturelles.",
-      "categories": [
-        {
-          "category": "Sport et Bien-être",
-          "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg", 
-          "skills": [
-            { "nom": "Yoga", "niveau": "Expert" },
-            { "nom": "Méditation", "niveau": "Avancé" }
-          ]
-        }
-      ],
-      "avatar": "../src/assets/avatarhealth.png"
+      ]
     }
+  ],
+  "avatar": "../assets/avatar6.png"
+},
+{
+  "id": 7,
+  "username": "SportFanatic",
+  "age": 29,
+  "sexe": "M",
+  "bio": "Coach sportif dédié à la transformation physique.",
+  "categories": [
+    {
+      "category": "Sport et Bien-être",
+      "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg",
+      "skills": [
+        {
+          "nom": "Coaching fitness",
+          "niveau": "Expert",
+          "description": "Conception de programmes d'entraînement personnalisés pour la remise en forme.",
+          "keyPoints": [
+            "Création de programmes d'entraînement adaptés aux objectifs individuels",
+            "Suivi et motivation des clients pour améliorer leur forme physique"
+          ]
+        },
+        {
+          "nom": "Nutrition sportive",
+          "niveau": "Avancé",
+          "description": "Conseils en nutrition pour optimiser les performances sportives et la récupération.",
+          "keyPoints": [
+            "Plans nutritionnels adaptés aux besoins énergétiques des sportifs",
+            "Conseils pour optimiser la récupération après l'exercice"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Développement Personnel",
+      "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
+      "skills": [
+        {
+          "nom": "Motivation",
+          "niveau": "Intermédiaire",
+          "description": "Aide à la définition des objectifs et maintien de la motivation dans un programme sportif.",
+          "keyPoints": [
+            "Aide à la mise en place de stratégies de motivation",
+            "Suivi personnalisé pour maintenir l'engagement tout au long du programme"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatar7.png"
+},
+{
+  "id": 8,
+  "username": "EcoWarrior",
+  "age": 24,
+  "sexe": "F",
+  "bio": "Passionnée par la durabilité et les projets verts.",
+  "categories": [
+    {
+      "category": "Bricolage et DIY",
+      "categoryImage": "https://i.pinimg.com/736x/5a/de/2f/5ade2f6e4ffc7c74845b651d3e702888.jpg",
+      "skills": [
+        {
+          "nom": "Fabrication d'objets recyclés",
+          "niveau": "Avancé",
+          "description": "Création d'objets à partir de matériaux recyclés, favorisant un mode de vie durable.",
+          "keyPoints": [
+            "Utilisation créative des matériaux recyclés pour réduire les déchets",
+            "Création d'objets utiles et décoratifs à partir de produits récupérés"
+          ]
+        },
+        {
+          "nom": "Conception écologique",
+          "niveau": "Intermédiaire",
+          "description": "Conception de produits en respectant les principes écologiques et de durabilité.",
+          "keyPoints": [
+            "Choix de matériaux écologiques pour la fabrication de produits durables",
+            "Respect de l'environnement tout au long du processus de conception"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Développement Personnel",
+      "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
+      "skills": [
+        {
+          "nom": "Gestion de projets",
+          "niveau": "Intermédiaire",
+          "description": "Gestion de projets écologiques et environnementaux de manière efficace.",
+          "keyPoints": [
+            "Planification et gestion de projets verts de l'initiation à la finalisation",
+            "Collaboration avec des partenaires et gestion des ressources de manière responsable"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatar8.jpg"
+},
+{
+  "id": 9,
+  "username": "MusicProd",
+  "age": 32,
+  "sexe": "M",
+  "bio": "Producteur de musique et compositeur passionné.",
+  "categories": [
+    {
+      "category": "Arts et Création",
+      "categoryImage": "https://i.pinimg.com/736x/99/e3/1d/99e31d1b532d03738ee9a4d0db968276.jpg",
+      "skills": [
+        {
+          "nom": "Composition musicale",
+          "niveau": "Expert",
+          "description": "Création de compositions musicales originales pour différents genres.",
+          "keyPoints": [
+            "Création d'œuvres musicales pour divers formats et genres",
+            "Maîtrise des instruments et des logiciels pour produire des compositions professionnelles"
+          ]
+        },
+        {
+          "nom": "Mixage audio",
+          "niveau": "Avancé",
+          "description": "Mixage et mastering de pistes audio professionnelles pour des productions musicales.",
+          "keyPoints": [
+            "Compétences avancées dans le mixage audio et l'égalisation des pistes",
+            "Optimisation du son final pour un rendu professionnel"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Technologie et Informatique",
+      "categoryImage": "https://i.pinimg.com/736x/c0/d4/33/c0d43305f8a5fb58300433c84dfeff76.jpg",
+      "skills": [
+        {
+          "nom": "Logiciels audio",
+          "niveau": "Intermédiaire",
+          "description": "Maîtrise des logiciels audio tels que Ableton, Logic Pro et FL Studio.",
+          "keyPoints": [
+            "Utilisation professionnelle des logiciels pour la production musicale",
+            "Création de pistes audio complexes et de sons uniques"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatar9.png"
+},
+
+{
+  "id": 10,
+  "username": "NatureLover",
+  "age": 27,
+  "sexe": "F",
+  "bio": "Guide touristique spécialisée en randonnées.",
+  "categories": [
+    {
+      "category": "Sport et Bien-être",
+      "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg",
+      "skills": [
+        {
+          "nom": "Randonnée",
+          "niveau": "Expert",
+          "description": "Expertise dans l'organisation et la direction de randonnées de tous niveaux.",
+          "keyPoints": [
+            "Planification et gestion de randonnées pour tous les niveaux",
+            "Connaissance approfondie des sentiers et des lieux naturels"
+          ]
+        },
+        {
+          "nom": "Cartographie",
+          "niveau": "Avancé",
+          "description": "Utilisation de cartes et de technologies GPS pour planifier des itinéraires de randonnée.",
+          "keyPoints": [
+            "Maîtrise des cartes topographiques et des outils GPS",
+            "Création d'itinéraires personnalisés en fonction des niveaux de difficulté"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Langues",
+      "categoryImage": "https://i.pinimg.com/736x/98/73/80/9873807841c87713a5ce9438c30c33d8.jpg",
+      "skills": [
+        {
+          "nom": "Italien",
+          "niveau": "Débutant",
+          "description": "Compétences de base pour comprendre et parler l'italien.",
+          "keyPoints": [
+            "Compréhension orale et écrite de l'italien",
+            "Capacité à tenir des conversations simples en italien"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatar10.png"
+},
+{
+  "id": 11,
+  "username": "TravelerSpirit",
+  "age": 34,
+  "sexe": "M",
+  "bio": "Explorateur de cultures et partageur de compétences.",
+  "categories": [
+    {
+      "category": "Langues",
+      "categoryImage": "https://i.pinimg.com/736x/99/e3/1d/99e31d1b532d03738ee9a4d0db968276.jpg",
+      "skills": [
+        {
+          "nom": "Espagnol",
+          "niveau": "Avancé",
+          "description": "Maîtrise de la langue espagnole pour des conversations professionnelles et informelles.",
+          "keyPoints": [
+            "Fluidité dans les conversations en espagnol",
+            "Capacité à aborder des sujets complexes en espagnol"
+          ]
+        },
+        {
+          "nom": "Anglais",
+          "niveau": "Intermédiaire",
+          "description": "Bonne maîtrise de l'anglais pour la communication dans un cadre international.",
+          "keyPoints": [
+            "Compréhension orale et écrite de l'anglais",
+            "Capacité à communiquer dans un environnement professionnel"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Développement Personnel",
+      "categoryImage": "https://i.pinimg.com/736x/15/41/b8/1541b863b27e811b479baba0250e7579.jpg",
+      "skills": [
+        {
+          "nom": "Gestion du stress",
+          "niveau": "Débutant",
+          "description": "Techniques pour réduire le stress et améliorer la concentration.",
+          "keyPoints": [
+            "Techniques simples de relaxation et de respiration",
+            "Aide à maintenir une attitude calme et concentrée dans les situations stressantes"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatarr.png"
+},
+{
+  "id": 12,
+  "username": "HealthyVibes",
+  "age": 28,
+  "sexe": "F",
+  "bio": "Passionnée par le bien-être et les solutions naturelles.",
+  "categories": [
+    {
+      "category": "Sport et Bien-être",
+      "categoryImage": "https://i.pinimg.com/736x/c7/e6/10/c7e610ba2dd988345478e2c32aa6dc0e.jpg",
+      "skills": [
+        {
+          "nom": "Yoga",
+          "niveau": "Expert",
+          "description": "Pratique avancée du yoga pour renforcer le corps et l'esprit.",
+          "keyPoints": [
+            "Maîtrise de diverses postures et techniques de respiration",
+            "Capacité à guider des séances de yoga adaptées à différents niveaux"
+          ]
+        },
+        {
+          "nom": "Méditation",
+          "niveau": "Avancé",
+          "description": "Utilisation de la méditation pour le bien-être et la gestion des émotions.",
+          "keyPoints": [
+            "Pratique de méditation pour réduire le stress et améliorer la concentration",
+            "Aide à la gestion des émotions grâce à la pleine conscience"
+          ]
+        }
+      ]
+    }
+  ],
+  "avatar": "../assets/avatarheakth.png"
+}
   ]
 }
-

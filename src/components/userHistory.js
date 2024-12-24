@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/userHistory.css';
-import avatar1 from '../assets/avatar1.jpg';
 
 const UserHistory = () => {
   const [activeTab, setActiveTab] = useState('learned');
@@ -9,40 +8,40 @@ const UserHistory = () => {
     {
       name: 'JavaScript Basics',
       info: 'Introduction aux concepts de base comme les variables, les boucles, et les fonctions.',
-      role: 'Tuteur',
+      role: 'HealthyVibes',
       date: '15 Décembre 2024',
-      image: 'assets/avatar3.png',
+      image: '../assets/avatarheakth.png',
     },
     {
       name: 'React Fundamentals',
       info: 'Apprentissage des composants, des hooks, et du state management.',
-      role: 'Tuteur',
+      role: 'TravelerSpirit',
       date: '10 Décembre 2024',
-      image: 'avatar1',
+      image: '../assets/avatarr.png',
     },
     {
       name: 'CSS Responsive Design',
       info: 'Création de sites web adaptatifs avec Flexbox et Grid.',
-      role: 'Tuteur',
+      role: 'NatureLover',
       date: '5 Décembre 2024',
-      image: 'assets/avatar3.png',
+      image: '../assets/avatar10.png',
     },
   ];
   
   const taughtSkills = [
     {
-      name: 'Node.js Basics',
+      name: 'Piano Basics',
       info: 'Concepts essentiels pour démarrer avec Node.js et construire des serveurs backend.',
-      role: 'Tuteur',
+      role: 'MusicProd',
       date: '20 Novembre 2024',
       image: 'assets/avatar6.png',
     },
     {
       name: 'Python Data Analysis',
       info: 'Utilisation de Python pour manipuler et analyser des ensembles de données.',
-      role: 'Tuteur',
+      role: 'NatureLover',
       date: '15 Novembre 2024',
-      image: 'assets/avatar6.png',
+      image: 'assets/avatar10.png',
     },
   ];
   

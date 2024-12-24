@@ -4,7 +4,8 @@ import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import "../styles/SliderComponent.css";
 import { FaHome, FaSearch, FaEnvelope, FaUser, FaSignOutAlt, FaBars } from "react-icons/fa";
 import { AiOutlineMessage } from "react-icons/ai";
-const SlideBar = ({ isMobile }) => {
+
+const SlideBar = ({ isMobile , humbon}) => {
   const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,7 +23,7 @@ const SlideBar = ({ isMobile }) => {
 
   return (
     <div>
-      {isMobile && location.pathname !== "/messages" && (
+      {isMobile &&  humbon==null &&(
         <button className="hamburger" onClick={toggleSidebar}>
           <FaBars />
         </button>
@@ -30,9 +31,15 @@ const SlideBar = ({ isMobile }) => {
       <div className={`sidebar ${isMobile && isActive ? "active" : ""}`}>
         <div className="user-profile">
           <div className="user-icon">
-            <img src="https://via.placeholder.com/50" alt="User" />
+          <img
+                src="/assets/logo3.png"
+                alt="Logo"
+                style={{ height: "3.5rem", width: "3.5rem" }}
+              />
+            <h1 className="user-name">SkillSphere</h1>
+                      
           </div>
-          <p className="user-name">John Doe</p>
+          
         </div>
         <div className="menu">
           {menuItems.map(

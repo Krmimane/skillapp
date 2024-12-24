@@ -10,7 +10,7 @@ const Home = ({currentUsername}) => {
   const [isMobile, setIsMobile] = useState(false);
   const [showStatistics, setShowStatistics] = useState(false);
   const [activeTab, setActiveTab] = useState('toLearn'); // Pour mobile : onglet actif
-
+  
   // Exemple de données utilisateur
   const userSkills = {
     toLearn: [
@@ -19,14 +19,14 @@ const Home = ({currentUsername}) => {
         description: "Apprendre les bases de Python pour l'analyse de données.",
         progress: 40,
         endDate: "2024-12-31",
-        tutorImage: "C:/Users/DELL/Documents/S3 cl/front end - back end/skillapp/src/assets/avatar1.jpg", 
+        tutorImage: "../assets/avatar1.jpg", 
       },
       {
         name: "Développement Web",
         description: "Créer des sites web dynamiques avec React.",
         progress: 60,
         endDate: "2025-01-15",
-        tutorImage: "../assets/avatar6.png",
+        tutorImage: "../assets/avatar2.jpg",
       },
     ],
     toTeach: [
@@ -35,14 +35,14 @@ const Home = ({currentUsername}) => {
         description: "Enseigner la structure des pages web.",
         progress: 80,
         endDate: "2024-12-25",
-        userImage: "assets/avatar1.jpg", // Image de l'utilisateur
+        userImage: "../assets/avatar3.png", // Image de l'utilisateur
       },
       {
         name: "CSS",
         description: "Enseigner les styles et animations.",
         progress: 50,
         endDate: "2025-01-10",
-        userImage: "assets/avatar1.jpg",
+        userImage: "../assets/avatar4.png",
       },
     ],
   };

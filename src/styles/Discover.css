@@ -13,6 +13,22 @@
     color: #333;
     margin-bottom: 20px;
 }
+.view-users-button12 {
+    background-color: #855485;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 8px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: background-color 0.3s ease;
+    text-align: center!important;
+  }
+  
+  .view-users-button:hover {
+    background-color: #441e50;
+  } 
 
 /* Assurez-vous que la police Brittany est bien importée */
 @import url('https://fonts.googleapis.com/css2?family=Brittany&display=swap');

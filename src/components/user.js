@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import "../styles/user.css"; // Importation du CSS pour le style
 import userData from '../data/user_skill.json'; // Importation des données utilisateur
-
 const User = ({ currentUsername }) => {
   const [user, setUser] = useState(userData.users[0]);
   const [formData, setFormData] = useState({ ...user });
@@ -50,7 +49,7 @@ const User = ({ currentUsername }) => {
       {/* Website View */}
       <div className="website-view">
         <div className="profile-header">
-          <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="avatar" className="avatar" />
+          <img src={formData.avatar} alt="avatar" className="avatar" />
           <div className="user-details">
             <div className="info-row">
               <div className="info-item">
@@ -105,6 +104,21 @@ const User = ({ currentUsername }) => {
                   ))
                 )}
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            {/* Mobile View */}
+      <div className="mobile-view">
+        <div className="mobile-frame">
+          <div className="mobile-header">
+          <div className="mobile-details">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="avatar" className="avatar-mobile" />
+            <button onClick={() => setIsEditing(true)} className="edit-btn">Éditer</button>
+          </div>
+            <div className="mobile-details">
+              <h3>{user.username}</h3>
+              <p>{user.bio}</p>
             </div>
           </div>
         </div>
